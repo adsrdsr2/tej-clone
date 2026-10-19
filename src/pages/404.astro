@@ -1,0 +1,44 @@
+---
+/* 404 — not found. */
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="Not found | Tejas Kumar"
+  description="This page doesn't exist."
+  current=""
+  routeName="/404"
+>
+  <div class="notfound">
+    <p class="text-micro">404</p>
+    <h1 class="text-major">Lost?</h1>
+    <p class="text-lede lede">
+      This page doesn't exist — but plenty of others do.
+    </p>
+    <p class="cta-row">
+      <a class="btn" href="/">Back home</a>
+      <a class="btn btn--ghost" href="/blog">Read the blog</a>
+    </p>
+  </div>
+</Base>
+
+<style>
+  .notfound {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 6rem 1.5rem 8rem;
+    text-align: center;
+  }
+  .notfound .text-micro { color: var(--accent); margin: 0 0 1rem; }
+  .notfound h1 { margin: 0 0 1.5rem; }
+  .lede { color: var(--fg-2); max-width: 36rem; margin: 0 auto; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; justify-content: center; }
+  .btn {
+    display: inline-block; padding: 0.9rem 1.75rem; border-radius: 999px;
+    background: var(--accent); color: var(--on-red);
+    font-family: var(--font-mono); font-size: var(--t-label);
+    letter-spacing: var(--track-label); text-transform: uppercase; text-decoration: none;
+  }
+  .btn--ghost { background: transparent; color: var(--fg); border: 1px solid var(--hairline-lit); }
+  .btn:hover { opacity: 0.88; }
+</style>

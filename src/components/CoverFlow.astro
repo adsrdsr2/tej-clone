@@ -1,0 +1,555 @@
+---
+/* CoverFlow — the home page's 3D speaking-talks carousel.
+   Unofficial reproduction of the tej.as cover-flow section, for study purposes.
+   - Takes no props; data comes from src/data/content.json ("coverflow", 85 items).
+   - 3D choreography is driven by src/scripts/coverflow.ts (sets `data-js` on
+     the section). Without JS, a CSS scroll-driven fallback
+     (`animation-timeline: view()`) under `.cf:not([data-js])` keeps the
+     cover-flow effect; without either, cards degrade to a flat scroll row.
+   - NOTE on perspective: the scrollable track forces `transform-style: flat`
+     (overflow != visible), so the real 3D depth comes from a per-card
+     `perspective()` transform function, which works inside a scroller.
+     `perspective` on `.cf` is kept per the reference values but only affects
+     the untransformed track itself.
+*/
+import content from "../data/content.json";
+
+interface Talk {
+  n: number;
+  title: string;
+  event: string;
+  youtube: string;
+}
+
+const talks = (content as { coverflow: Talk[] }).coverflow;
+const watchUrl = (id: string) => `https://www.youtube.com/watch?v=${id}`;
+const thumbUrl = (id: string) => `https://i.ytimg.com/vi/${id}/mqdefault.jpg`;
+---
+
+<section class="cf" aria-labelledby="cf-heading">
+  <div class="cf-intro">
+    <h2 id="cf-heading" class="text-major">I speak at conferences.</h2>
+    <p class="cf-sub">
+      <strong>85</strong> talks at <strong>68</strong> events, <strong>2012</strong> to
+      <strong>2026</strong>. Here they all are.
+    </p>
+    <a class="cta" href="/speaking">
+      INVITE ME TO SPEAK <span class="cta-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+
+  <div class="cf-stage">
+    <button type="button" class="cf-nav cf-nav--prev" aria-label="Previous talk">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path
+          d="M15 5l-7 7 7 7"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </button>
+
+    <div
+      class="cf-track"
+      data-cf-track
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Conference talks"
+      tabindex="0"
+    >
+      {
+        talks.map((t, i) => (
+          <article
+            class="cf-item"
+            data-index={i}
+            data-n={t.n}
+            data-title={t.title}
+            data-event={t.event}
+          >
+            <div class="cf-art">
+              <img
+                class="cf-img"
+                src={thumbUrl(t.youtube)}
+                alt={`${t.title} — ${t.event}`}
+                width="320"
+                height="180"
+                loading={i === 0 ? "eager" : "lazy"}
+                fetchpriority={i === 0 ? "high" : undefined}
+                draggable="false"
+              />
+              <div class="cf-shade" aria-hidden="true"></div>
+              <div class="cf-face-ui">
+                <p class="cf-face-title">{t.title}</p>
+                <p class="cf-face-event">{t.event}</p>
+                <a
+                  class="cf-face-link"
+                  href={watchUrl(t.youtube)}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Watch on YouTube <span aria-hidden="true">&nearr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="cf-mirror" aria-hidden="true">
+              <img
+                src={thumbUrl(t.youtube)}
+                alt=""
+                width="320"
+                height="180"
+                loading={i === 0 ? "eager" : "lazy"}
+                draggable="false"
+              />
+            </div>
+            <button
+              type="button"
+              class="cf-shield"
+              data-href={watchUrl(t.youtube)}
+              aria-label={`${t.event}. Talk ${t.n} of 85.`}
+            ></button>
+          </article>
+        ))
+      }
+    </div>
+
+    <button type="button" class="cf-nav cf-nav--next" aria-label="Next talk">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path
+          d="M9 5l7 7-7 7"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="cf-strip" aria-hidden="true">
+    <div class="cf-strip__rail">
+      {talks.map(() => <span class="cf-strip__tick"></span>)}
+      <span class="cf-strip__thumb"></span>
+    </div>
+  </div>
+
+  <p class="cf-live" data-cf-live aria-live="polite"></p>
+</section>
+
+<script src="../scripts/coverflow.ts"></script>
+
+<style>
+  /* ---------- section + geometry tokens (verified reference values) ---------- */
+  .cf {
+    --cf-w: min(34rem, 78vw);
+    --cf-h: clamp(21rem, 58vh, 30rem);
+    --cf-rot: 38deg;
+    --cf-persp: 1400px;
+    --cf-gap: clamp(0.5rem, 1.5vw, 1rem);
+    position: relative;
+    perspective: var(--cf-persp);
+    padding-block: clamp(2.5rem, 6vh, 4rem);
+  }
+  @media (max-width: 800px) {
+    .cf { --cf-h: 24rem; }
+  }
+  @media (max-width: 700px) {
+    .cf { --cf-h: 21rem; }
+  }
+  @media (max-width: 620px) {
+    .cf { --cf-h: 18rem; }
+  }
+  @media (max-width: 520px) {
+    .cf { --cf-h: 15.5rem; }
+  }
+
+  /* ---------- intro ---------- */
+  .cf-intro {
+    padding-inline: var(--gutter);
+    text-align: left;
+  }
+  .cf-sub {
+    font-size: var(--t-lede);
+    line-height: var(--lh-lede);
+    color: var(--fg-2);
+    margin: 1rem 0 1.5rem;
+  }
+  .cf-sub strong {
+    color: var(--fg);
+    font-weight: 800;
+  }
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 1.6rem;
+    border-radius: 0.35rem;
+    transition:
+      background-color var(--dur-fast) var(--ease),
+      transform var(--dur-fast) var(--ease);
+  }
+  .cta:hover {
+    filter: brightness(1.12);
+    transform: translateY(-1px);
+  }
+  .cta:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+  }
+  .cta-arrow {
+    display: inline-block;
+    transition: transform var(--dur-fast) var(--ease);
+  }
+  .cta:hover .cta-arrow {
+    transform: translateX(0.3rem);
+  }
+
+  /* ---------- stage / track ---------- */
+  .cf-stage {
+    position: relative;
+    margin-top: clamp(1rem, 3vh, 2rem);
+  }
+  .cf-track {
+    position: relative; /* offsetParent for card distance math */
+    display: flex;
+    gap: var(--cf-gap);
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    /* leading/trailing space so the first/last card can reach center */
+    padding-inline: max(1.25rem, calc(50% - var(--cf-w) / 2));
+    padding-block: clamp(2.5rem, 7vh, 4rem);
+    scrollbar-width: none;
+  }
+  .cf-track::-webkit-scrollbar {
+    display: none;
+  }
+  .cf-track:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: -3px;
+  }
+
+  /* ---------- cards ---------- */
+  .cf-item {
+    position: relative;
+    flex: 0 0 auto;
+    width: var(--cf-w);
+    scroll-snap-align: center;
+    will-change: transform;
+  }
+  .cf-art {
+    position: relative;
+    height: var(--cf-h);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--ink);
+    border: 1px solid var(--hairline);
+    box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.55);
+  }
+  .cf-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .cf-shade {
+    position: absolute;
+    inset: 0;
+    background: var(--void);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .cf-face-ui {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    padding: 3.5rem 1.25rem 1.25rem;
+    background: linear-gradient(
+      to top,
+      rgb(5 3 4 / 0.92) 0%,
+      rgb(5 3 4 / 0.55) 55%,
+      transparent 100%
+    );
+    color: var(--bone);
+  }
+  .cf-face-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.35rem;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    margin: 0 0 0.35rem;
+  }
+  .cf-face-event {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #cfc8c2;
+    margin: 0 0 0.6rem;
+  }
+  .cf-face-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .cf-mirror {
+    height: calc(var(--cf-w) * 0.2);
+    margin-top: 0.5rem;
+    overflow: hidden;
+    border-radius: 0 0 14px 14px;
+    opacity: 0.18;
+    -webkit-mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0.7), transparent 90%);
+    mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0.7), transparent 90%);
+  }
+  .cf-mirror img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleY(-1);
+  }
+  .cf-shield {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 14px;
+  }
+  .cf-shield:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+  }
+
+  /* ---------- nav buttons ---------- */
+  .cf-nav {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    z-index: 50;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: color-mix(in srgb, var(--void) 68%, transparent);
+    color: var(--bone);
+    border: 1px solid rgb(255 255 255 / 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    cursor: pointer;
+    transition:
+      background-color var(--dur-fast) var(--ease),
+      transform var(--dur-fast) var(--ease);
+  }
+  .cf-nav:hover {
+    background: color-mix(in srgb, var(--void) 88%, transparent);
+    transform: scale(1.06);
+  }
+  .cf-nav:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+  }
+  .cf-nav--prev {
+    left: clamp(0.5rem, 3vw, 2rem);
+  }
+  .cf-nav--next {
+    right: clamp(0.5rem, 3vw, 2rem);
+  }
+  .cf-nav svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  /* ---------- tick strip ---------- */
+  .cf-strip {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding-inline: 1.5rem;
+  }
+  .cf-strip__rail {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    container-type: inline-size;
+  }
+  .cf-strip__tick {
+    flex: none;
+    width: 2px;
+    height: 0.55rem;
+    border-radius: 2px;
+    background: var(--fg-3);
+    opacity: 0.55;
+  }
+  .cf-strip__thumb {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    translate: 0 -50%;
+    width: 3.5rem;
+    height: 0.9rem;
+    border-radius: 999px;
+    background: var(--red);
+    opacity: 0.9;
+  }
+
+  /* ---------- polite live region (visually hidden) ---------- */
+  .cf-live {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* ============================================================
+     No-JS fallback: scroll-driven cover-flow via view timelines.
+     Only applies when the driver script hasn't set `data-js`, and only
+     in browsers supporting `animation-timeline: view()`. Otherwise the
+     cards stay a flat, fully-readable scroll row (face-ui always visible).
+     ============================================================ */
+  .cf:not([data-js]) .cf-item {
+    view-timeline-name: --cf-item;
+    view-timeline-axis: inline;
+  }
+  @supports (animation-timeline: view()) {
+    .cf:not([data-js]) .cf-item {
+      animation:
+        cf-swing linear both,
+        cf-stack linear both;
+      animation-timeline: --cf-item;
+    }
+    .cf:not([data-js]) .cf-shade {
+      animation: cf-dim linear both;
+      animation-timeline: --cf-item;
+    }
+    .cf:not([data-js]) .cf-face-ui {
+      animation: cf-faceui linear both;
+      animation-timeline: --cf-item;
+    }
+    .cf:not([data-js]) .cf-mirror {
+      animation: cf-mirrorfade linear both;
+      animation-timeline: --cf-item;
+    }
+  }
+  @supports (timeline-scope: --x) {
+    .cf:not([data-js]) {
+      timeline-scope: --cf-scroll;
+    }
+    .cf:not([data-js]) .cf-track {
+      scroll-timeline-name: --cf-scroll;
+      scroll-timeline-axis: inline;
+    }
+    .cf:not([data-js]) .cf-strip__thumb {
+      animation: cf-thumb-run linear both;
+      animation-timeline: --cf-scroll;
+    }
+  }
+
+  @keyframes cf-swing {
+    0% {
+      transform: perspective(1400px) translateX(42%)
+        translateZ(calc(var(--cf-w) * -0.62)) rotateY(var(--cf-rot)) scale(0.74);
+    }
+    50% {
+      transform: perspective(1400px) translateX(0)
+        translateZ(calc(var(--cf-w) * 0.42)) rotateY(0deg) scale(1);
+    }
+    100% {
+      transform: perspective(1400px) translateX(-42%)
+        translateZ(calc(var(--cf-w) * -0.62)) rotateY(calc(var(--cf-rot) * -1))
+        scale(0.74);
+    }
+  }
+  @keyframes cf-stack {
+    0%,
+    100% {
+      z-index: 1;
+    }
+    38%,
+    62% {
+      z-index: 40;
+    }
+    47%,
+    53% {
+      z-index: 100;
+    }
+  }
+  @keyframes cf-dim {
+    0%,
+    100% {
+      opacity: 0.86;
+    }
+    30%,
+    70% {
+      opacity: 0.55;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  @keyframes cf-faceui {
+    0%,
+    41% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    50% {
+      opacity: 1;
+      visibility: visible;
+    }
+    59%,
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  @keyframes cf-mirrorfade {
+    0%,
+    100% {
+      opacity: 0.14;
+    }
+    50% {
+      opacity: 0.42;
+    }
+  }
+  @keyframes cf-thumb-run {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(100cqi - 100%));
+    }
+  }
+
+  /* No-JS + reduced motion: keep everything flat and still. */
+  @media (prefers-reduced-motion: reduce) {
+    .cf:not([data-js]) .cf-item,
+    .cf:not([data-js]) .cf-shade,
+    .cf:not([data-js]) .cf-face-ui,
+    .cf:not([data-js]) .cf-mirror,
+    .cf:not([data-js]) .cf-strip__thumb {
+      animation: none;
+    }
+  }
+</style>

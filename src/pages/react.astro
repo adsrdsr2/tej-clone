@@ -1,0 +1,82 @@
+---
+/* /react — Fluent React book page. */
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="Fluent React Book by Tejas Kumar: How React Works Inside"
+  description="Fluent React — the book by Tejas Kumar on how React works inside. Learn how React actually works."
+  current="/react"
+  routeName="/react"
+>
+  <nav aria-label="Breadcrumb" class="crumb">
+    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Book</span>
+  </nav>
+
+  <header class="page-head">
+    <p class="text-label book-kicker">Fluent React — the book</p>
+    <h1 class="text-major">How React actually works.</h1>
+    <p class="text-lede lede">
+      Not the API docs. The internals: the reconciler, the fiber tree, the
+      scheduler — how React turns your components into pixels.
+    </p>
+  </header>
+
+  <section aria-labelledby="inside">
+    <h2 id="inside" class="text-minor">Inside the book</h2>
+    <p class="text-body">
+      <em>Fluent React</em> is Tejas Kumar's book on how React works inside.
+      It builds your mental model from the ground up: rendering, reconciliation,
+      the fiber architecture, and how concurrent features change the game.
+    </p>
+    <div class="placeholder" role="note" aria-label="Book contents placeholder">
+      <p class="text-label">[BOOK CONTENTS PLACEHOLDER — table of contents not in evidence package]</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="get">
+    <h2 id="get" class="text-minor">Get the book</h2>
+    <p class="text-body">
+      Available from O'Reilly and wherever technical books are sold.
+    </p>
+    <p class="cta-row">
+      <a class="btn" href="https://www.oreilly.com/library/view/fluent-react/9781098138707/" target="_blank" rel="noopener">Read on O'Reilly</a>
+      <a class="btn btn--ghost" href="/workshops">Book a React workshop</a>
+    </p>
+  </section>
+</Base>
+
+<style>
+  .crumb {
+    font-family: var(--font-mono);
+    font-size: var(--t-micro);
+    letter-spacing: var(--track-micro);
+    text-transform: uppercase;
+    color: var(--fg-3);
+    display: flex; gap: 0.75rem; align-items: center;
+    padding: 2.5rem 1.5rem 0; max-width: 72rem; margin: 0 auto;
+  }
+  .crumb a { color: var(--fg-3); }
+  .crumb a:hover { color: var(--accent); }
+  .page-head { max-width: 72rem; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+  .book-kicker { color: var(--accent); margin: 0 0 1.25rem; }
+  .page-head h1 { margin: 0 0 1.5rem; }
+  .lede { max-width: 42rem; color: var(--fg-2); }
+  section { max-width: 72rem; margin: 0 auto; padding: 2.5rem 1.5rem; border-top: 1px solid var(--hairline); }
+  section h2 { margin: 0 0 1.5rem; }
+  section p { max-width: 46rem; color: var(--fg-2); }
+  .placeholder {
+    border: 1px dashed var(--hairline-lit); border-radius: 0.75rem;
+    padding: 3rem 1.5rem; background: var(--bg-plate);
+    text-align: center; color: var(--fg-3); margin-top: 2rem;
+  }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+  .btn {
+    display: inline-block; padding: 0.9rem 1.75rem; border-radius: 999px;
+    background: var(--accent); color: var(--on-red);
+    font-family: var(--font-mono); font-size: var(--t-label);
+    letter-spacing: var(--track-label); text-transform: uppercase; text-decoration: none;
+  }
+  .btn--ghost { background: transparent; color: var(--fg); border: 1px solid var(--hairline-lit); }
+  .btn:hover { opacity: 0.88; }
+</style>

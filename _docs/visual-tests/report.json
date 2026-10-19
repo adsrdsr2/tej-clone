@@ -1,0 +1,1052 @@
+{
+  "base": "http://localhost:4321",
+  "started": "2026-10-15T21:17:34.914Z",
+  "shots": [
+    {
+      "name": "home-1440x900-top-light",
+      "route": "/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "home-1440x900-top-light.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-1440x900-top-dark",
+      "route": "/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "home-1440x900-top-dark.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-1440x900-midscroll",
+      "route": "/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "home-1440x900-midscroll.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-1440x900-bottom",
+      "route": "/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "home-1440x900-bottom.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-1440x900-full",
+      "route": "/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "home-1440x900-full.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-1280x800-top",
+      "route": "/",
+      "viewport": [
+        1280,
+        800
+      ],
+      "status": 200,
+      "file": "home-1280x800-top.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-1280x800-full",
+      "route": "/",
+      "viewport": [
+        1280,
+        800
+      ],
+      "status": 200,
+      "file": "home-1280x800-full.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-768x1024-top",
+      "route": "/",
+      "viewport": [
+        768,
+        1024
+      ],
+      "status": 200,
+      "file": "home-768x1024-top.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-768x1024-full",
+      "route": "/",
+      "viewport": [
+        768,
+        1024
+      ],
+      "status": 200,
+      "file": "home-768x1024-full.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-390x844-top",
+      "route": "/",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "file": "home-390x844-top.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-390x844-midscroll",
+      "route": "/",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "file": "home-390x844-midscroll.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-390x844-bottom",
+      "route": "/",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "file": "home-390x844-bottom.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-390x844-full",
+      "route": "/",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "file": "home-390x844-full.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-320x568-top",
+      "route": "/",
+      "viewport": [
+        320,
+        568
+      ],
+      "status": 200,
+      "file": "home-320x568-top.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-320x568-full",
+      "route": "/",
+      "viewport": [
+        320,
+        568
+      ],
+      "status": 200,
+      "file": "home-320x568-full.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-theme-dark-noflash",
+      "route": "/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "home-theme-dark-noflash.png",
+      "themeAtLoad": "dark",
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-theme-light-noflash",
+      "route": "/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "home-theme-light-noflash.png",
+      "themeAtLoad": "light",
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-navpop-open",
+      "route": "/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "home-navpop-open.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-nav-hover",
+      "route": "/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "home-nav-hover.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-reduced-motion",
+      "route": "/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "home-reduced-motion.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-coverflow-crop",
+      "route": "/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "home-coverflow-crop.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-coverflow-nojs",
+      "route": "/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "home-coverflow-nojs.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-coverflow-reduced-motion",
+      "route": "/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "home-coverflow-reduced-motion.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "home-ask-typed",
+      "route": "/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "home-ask-typed.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "name": "page-about-full",
+      "route": "/about",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-about-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-story-full",
+      "route": "/story",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-story-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-speaking-full",
+      "route": "/speaking",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-speaking-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-workshops-full",
+      "route": "/workshops",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-workshops-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-preaching-full",
+      "route": "/preaching",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-preaching-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-calendar-full",
+      "route": "/calendar",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-calendar-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-investing-full",
+      "route": "/investing",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-investing-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-status-full",
+      "route": "/status",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-status-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-talks-full",
+      "route": "/talks",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-talks-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-react-full",
+      "route": "/react",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-react-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-blog-full",
+      "route": "/blog",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-blog-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-podcast-full",
+      "route": "/podcast",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-podcast-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-demos-tavus-full",
+      "route": "/demos/tavus",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-demos-tavus-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-blog-post-full",
+      "route": "/blog/local-llm-vs-cloud",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-blog-post-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-talk-transcript-full",
+      "route": "/talks/agent-conf-2026",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-talk-transcript-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-podcast-episode-full",
+      "route": "/podcast/ep/how-to-build-tech-software-full-stack-engineering",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "file": "page-podcast-episode-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "page-404",
+      "route": "/nonexistent-test-xyz",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 404,
+      "file": "page-404.png",
+      "hOverflow": 0,
+      "consoleErrors": [
+        "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "name": "mobile-390x844-about-full",
+      "route": "/about",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "file": "mobile-390x844-about-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "mobile-390x844-blog-full",
+      "route": "/blog",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "file": "mobile-390x844-blog-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    },
+    {
+      "name": "mobile-390x844-speaking-full",
+      "route": "/speaking",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "file": "mobile-390x844-speaking-full.png",
+      "hOverflow": 0,
+      "consoleErrors": []
+    }
+  ],
+  "checks": [
+    {
+      "name": "I1-theme-toggle",
+      "pass": true,
+      "detail": "{\"theme\":\"dark\",\"stored\":\"dark\",\"label\":\"Dark\"}"
+    },
+    {
+      "name": "I1-theme-label",
+      "pass": true,
+      "detail": "Dark"
+    },
+    {
+      "name": "I1-theme-persist",
+      "pass": true,
+      "detail": "dark"
+    },
+    {
+      "name": "I2-popover-open-7items",
+      "pass": true,
+      "detail": "[\"CalendarWhere I'll be next\",\"WorkshopsI teach your team\",\"BookFluent React\",\"AboutThe long version\",\"StatusHow I'm doing today\",\"InvestingStartups I back\",\"ContactSay hello\"]"
+    },
+    {
+      "name": "I2-popover-escape",
+      "pass": true
+    },
+    {
+      "name": "I2-popover-link-200",
+      "pass": true,
+      "detail": "/calendar"
+    },
+    {
+      "name": "I3-pill-fixed-bottom",
+      "pass": true,
+      "detail": "{\"y\":764,\"h\":64,\"w\":212,\"pos\":\"fixed\"}"
+    },
+    {
+      "name": "I3-scroll-to-top",
+      "pass": true,
+      "detail": "y1=7145 y2=0"
+    },
+    {
+      "name": "I4-cf-85-shields",
+      "pass": true,
+      "detail": "{\"n\":85,\"sample\":\"AI Engineer World's Fair 2026 (Workshop). Talk 1 of 85.\"}"
+    },
+    {
+      "name": "I4-cf-next-center-changes",
+      "pass": true,
+      "detail": "scrollLeft 0->736, card 0->1"
+    },
+    {
+      "name": "I4-cf-prev",
+      "pass": true,
+      "detail": "scrollLeft back to 0"
+    },
+    {
+      "name": "I4-cf-keyboard-arrowright",
+      "pass": true,
+      "detail": "scrollLeft 0->736"
+    },
+    {
+      "name": "I5-ask-results-real-links",
+      "pass": true,
+      "detail": "6 links e.g. /talks/react-universe-meetup-berlin-2026, /blog/what-is-react-fiber, /talks/react-fwdays-2025"
+    },
+    {
+      "name": "I5-ask-copy-link",
+      "pass": true,
+      "detail": "Copied!"
+    },
+    {
+      "name": "I5-ask-chip",
+      "pass": true,
+      "detail": "8 results"
+    },
+    {
+      "name": "I5-ask-escape-clears",
+      "pass": true
+    },
+    {
+      "name": "I5-ask-links-resolve",
+      "pass": true,
+      "detail": "/talks/react-universe-meetup-berlin-2026, /blog/what-is-react-fiber, /talks/react-fwdays-2025, /talks/react-summit-2025"
+    },
+    {
+      "name": "I6-nav-/speaking",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "I6-nav-/story",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "I6-nav-/podcast",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "I6-nav-/blog",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "I7-reduced-cf-flat",
+      "pass": true,
+      "detail": "\"translateX(0px) translateZ(0px) rotateY(0deg) scale(1)\""
+    },
+    {
+      "name": "I7-reduced-ask-at-once",
+      "pass": true,
+      "detail": "visible=6 in 900ms"
+    },
+    {
+      "name": "I8-overflow-_-1440",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "name": "I8-overflow-_-390",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "name": "I8-overflow-_-320",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "name": "I8-overflow-_blog-390",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "name": "I8-overflow-_speaking-768",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "name": "I9-nojs-renders",
+      "pass": true,
+      "detail": "h1 present, status 200"
+    }
+  ],
+  "errors": [
+    {
+      "shot": "home-1440x900-top-light",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-1440x900-top-dark",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-1440x900-midscroll",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-1440x900-bottom",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-1440x900-full",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-1280x800-top",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-1280x800-full",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-768x1024-top",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-768x1024-full",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-390x844-top",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-390x844-midscroll",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-390x844-bottom",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-390x844-full",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-320x568-top",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-320x568-full",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-navpop-open",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-nav-hover",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-reduced-motion",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-coverflow-crop",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-coverflow-nojs",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-coverflow-reduced-motion",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "home-ask-typed",
+      "errs": [
+        "reqfail: https://i.ytimg.com/vi/NdrSPm6NCdk/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/aNZz40sQg_g/mqdefault.jpg",
+        "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "reqfail: https://i.ytimg.com/vi/OwkZ-GMKtv8/mqdefault.jpg"
+      ]
+    },
+    {
+      "shot": "page-404",
+      "errs": [
+        "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    }
+  ],
+  "finished": "2026-10-15T21:20:02.831Z"
+}

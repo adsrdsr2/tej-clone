@@ -1,0 +1,88 @@
+---
+/* /talks — 26 TalkRow rows: year | title | event, hairline separators. */
+import Base from "../layouts/Base.astro";
+import content from "../data/content.json";
+
+const yearOf = (event: string): string => {
+  const m = event.match(/\b(\d{4})\b/g);
+  return m ? m[m.length - 1] : "—";
+};
+
+const talks = content.transcripts.map((t) => ({
+  ...t,
+  year: yearOf(t.event),
+}));
+---
+
+<Base
+  title="Talk transcripts by Tejas Kumar"
+  description="Talk transcripts by Tejas Kumar: 26 of his recorded talks with a full written transcript."
+  current="/talks"
+  routeName="/talks"
+>
+  <nav aria-label="Breadcrumb" class="crumb">
+    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Talk transcripts</span>
+  </nav>
+
+  <header class="page-head">
+    <h1 class="text-major">Talk transcripts</h1>
+    <p class="text-lede lede">
+      26 of my 85 recorded talks have a full transcript. Here's every one of
+      them — word for word.
+    </p>
+  </header>
+
+  <section class="talks" aria-labelledby="transcript-list">
+    <h2 id="transcript-list" class="text-minor visually-hidden">All transcripts</h2>
+    <ul class="talk-rows">
+      {talks.map((t) => (
+        <li>
+          <a class="talk-row" href={`/talks/${t.slug}`}>
+            <span class="talk-row__year text-micro">{t.year}</span>
+            <span class="talk-row__title text-body">{t.title}</span>
+            <span class="talk-row__event text-small">{t.event}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Base>
+
+<style>
+  .crumb {
+    font-family: var(--font-mono);
+    font-size: var(--t-micro);
+    letter-spacing: var(--track-micro);
+    text-transform: uppercase;
+    color: var(--fg-3);
+    display: flex; gap: 0.75rem; align-items: center;
+    padding: 2.5rem 1.5rem 0; max-width: 72rem; margin: 0 auto;
+  }
+  .crumb a { color: var(--fg-3); }
+  .crumb a:hover { color: var(--accent); }
+  .page-head { max-width: 72rem; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+  .page-head h1 { margin: 0 0 1.5rem; }
+  .lede { max-width: 44rem; color: var(--fg-2); }
+  .talks { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem 6rem; }
+  .talk-rows { list-style: none; margin: 0; padding: 0; }
+  .talk-rows li { border-top: 1px solid var(--hairline); }
+  .talk-rows li:last-child { border-bottom: 1px solid var(--hairline); }
+  .talk-row {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr auto;
+    gap: 1.25rem;
+    align-items: baseline;
+    padding: 1.25rem 0.25rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .talk-row:hover .talk-row__title { color: var(--accent); }
+  .talk-row__year { color: var(--fg-3); }
+  .talk-row__title { font-weight: var(--w-mid); }
+  .talk-row__event { color: var(--fg-3); text-align: right; max-width: 24rem; }
+  @media (max-width: 640px) {
+    .talk-row { grid-template-columns: 3.5rem 1fr; }
+    .talk-row__event { grid-column: 2; text-align: left; }
+  }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>

@@ -1,0 +1,126 @@
+---
+/* /about — long biography, timeline, testimonial avatars (static reproduction). */
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="About Tejas Kumar, AI Engineer at IBM in Berlin"
+  description="Tejas Kumar is an AI Engineer at IBM in Berlin. Speaker, author of Fluent React, host of the ConTejas Code podcast. This is the long version."
+  current="/about"
+  routeName="/about"
+>
+  <nav aria-label="Breadcrumb" class="crumb">
+    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">About</span>
+  </nav>
+
+  <header class="page-head">
+    <h1 class="text-major">About Tejas Kumar</h1>
+    <p class="text-lede lede">
+      Tejas Kumar is an AI Engineer at IBM in Berlin. He's a keynote speaker,
+      the author of <em>Fluent React</em>, and the host of the
+      <em>ConTejas Code</em> podcast.
+    </p>
+  </header>
+
+  <section class="bio" aria-labelledby="short-version">
+    <h2 id="short-version" class="text-minor">The short version</h2>
+    <p class="text-body">
+      Tejas works as an AI Engineer at IBM in Berlin. He speaks at conferences
+      around the world about AI engineering, agentic systems, and how React
+      actually works inside. He wrote <em>Fluent React</em>, a book on how
+      React works, and hosts <em>ConTejas Code</em>, a long-form podcast for
+      engineers featuring the brightest minds in the industry.
+    </p>
+    <p class="text-body">
+      He also trains teams in agentic AI and React, advises early-stage
+      startups as an angel investor, and occasionally guest-preaches at churches.
+    </p>
+  </section>
+
+  <section class="timeline" aria-labelledby="timeline">
+    <h2 id="timeline" class="text-minor">The timeline</h2>
+    <div class="placeholder" role="note" aria-label="Timeline content placeholder">
+      <p class="text-label">[TIMELINE PLACEHOLDER — biography timeline not in evidence package]</p>
+    </div>
+  </section>
+
+  <section class="kind-words" aria-labelledby="kind-words">
+    <h2 id="kind-words" class="text-minor">Kind words</h2>
+    <div class="placeholder" role="note" aria-label="Testimonials content placeholder">
+      <p class="text-label">[TESTIMONIALS PLACEHOLDER — testimonial avatars and quotes not in evidence package]</p>
+    </div>
+  </section>
+
+  <section class="cta" aria-labelledby="work-together">
+    <h2 id="work-together" class="text-minor">Work with me</h2>
+    <p class="text-body">
+      Want me on your stage or in your team's training room?
+    </p>
+    <p class="cta-row">
+      <a class="btn" href="/speaking">Invite me to speak</a>
+      <a class="btn btn--ghost" href="/workshops">Book a workshop</a>
+    </p>
+  </section>
+</Base>
+
+<style>
+  .crumb {
+    font-family: var(--font-mono);
+    font-size: var(--t-micro);
+    letter-spacing: var(--track-micro);
+    text-transform: uppercase;
+    color: var(--fg-3);
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 2.5rem 1.5rem 0;
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+  .crumb a { color: var(--fg-3); }
+  .crumb a:hover { color: var(--accent); }
+  .page-head {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+  }
+  .page-head h1 { margin: 0 0 1.5rem; }
+  .lede { max-width: 42rem; color: var(--fg-2); }
+  .lede em { font-style: italic; }
+  section {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+    border-top: 1px solid var(--hairline);
+  }
+  section h2 { margin: 0 0 1.5rem; }
+  .bio p { max-width: 46rem; color: var(--fg-2); }
+  .bio p + p { margin-top: 1.25rem; }
+  .placeholder {
+    border: 1px dashed var(--hairline-lit);
+    border-radius: 0.75rem;
+    padding: 2.5rem 1.5rem;
+    background: var(--bg-plate);
+    text-align: center;
+    color: var(--fg-3);
+  }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+  .btn {
+    display: inline-block;
+    padding: 0.9rem 1.75rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--on-red);
+    font-family: var(--font-mono);
+    font-size: var(--t-label);
+    letter-spacing: var(--track-label);
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .btn--ghost {
+    background: transparent;
+    color: var(--fg);
+    border: 1px solid var(--hairline-lit);
+  }
+  .btn:hover { opacity: 0.88; }
+</style>

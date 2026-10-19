@@ -1,0 +1,67 @@
+---
+/* /status — static "How I'm doing" panel; live data source unknown. */
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="How Tejas Kumar is doing: live health status"
+  description="How Tejas Kumar is doing: his live health status dashboard (static reproduction)."
+  current="/status"
+  routeName="/status"
+>
+  <nav aria-label="Breadcrumb" class="crumb">
+    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Status</span>
+  </nav>
+
+  <header class="page-head">
+    <h1 class="text-major">How I'm doing.</h1>
+    <p class="text-lede lede">A live look at my health — updated daily.</p>
+  </header>
+
+  <section aria-labelledby="status-panel">
+    <h2 id="status-panel" class="text-minor visually-hidden">Status panel</h2>
+    <div class="status-panel">
+      <div class="status-dot" aria-hidden="true"></div>
+      <p class="text-body status-line">Tejas is doing well.</p>
+      <div class="placeholder" role="note" aria-label="Health metrics placeholder">
+        <p class="text-label">[HEALTH METRICS PLACEHOLDER — live data source unknown, static reproduction]</p>
+      </div>
+    </div>
+    <p class="text-micro source-note">Live data source unknown — static reproduction</p>
+  </section>
+</Base>
+
+<style>
+  .crumb {
+    font-family: var(--font-mono);
+    font-size: var(--t-micro);
+    letter-spacing: var(--track-micro);
+    text-transform: uppercase;
+    color: var(--fg-3);
+    display: flex; gap: 0.75rem; align-items: center;
+    padding: 2.5rem 1.5rem 0; max-width: 72rem; margin: 0 auto;
+  }
+  .crumb a { color: var(--fg-3); }
+  .crumb a:hover { color: var(--accent); }
+  .page-head { max-width: 72rem; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+  .page-head h1 { margin: 0 0 1.5rem; }
+  .lede { max-width: 42rem; color: var(--fg-2); }
+  section { max-width: 72rem; margin: 0 auto; padding: 2.5rem 1.5rem; border-top: 1px solid var(--hairline); }
+  .status-panel {
+    border: 1px solid var(--hairline); border-radius: 1rem;
+    padding: 3rem 2rem; background: var(--bg-plate);
+    display: flex; flex-direction: column; align-items: center; gap: 1.5rem;
+  }
+  .status-dot {
+    width: 1.25rem; height: 1.25rem; border-radius: 999px;
+    background: #2f9e44; box-shadow: 0 0 0 6px color-mix(in srgb, #2f9e44 18%, transparent);
+  }
+  .status-line { margin: 0; font-weight: var(--w-mid); }
+  .placeholder {
+    border: 1px dashed var(--hairline-lit); border-radius: 0.75rem;
+    padding: 2.5rem 1.5rem; background: var(--bg);
+    text-align: center; color: var(--fg-3); width: 100%;
+  }
+  .source-note { color: var(--fg-3); margin-top: 1.25rem; text-align: center; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>

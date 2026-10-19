@@ -1,0 +1,73 @@
+---
+/* /blog — 31 PostCards, newest to oldest (content.json order), + RSS link. */
+import Base from "../layouts/Base.astro";
+import content from "../data/content.json";
+
+const fmt = (d: string) =>
+  new Date(d).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+---
+
+<Base
+  title="Writing on AI, React and Engineering | Tejas Kumar"
+  description="I write about AI, React and engineering — essays and notes by Tejas Kumar."
+  current="/blog"
+  routeName="/blog"
+>
+  <nav aria-label="Breadcrumb" class="crumb">
+    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Blog</span>
+  </nav>
+
+  <header class="page-head">
+    <h1 class="text-major">I write</h1>
+    <p class="text-lede lede">
+      Essays and notes on AI, React and engineering — {content.blog.length} posts
+      and counting. <a href="/rss.xml">Subscribe via RSS</a>.
+    </p>
+  </header>
+
+  <section class="posts" aria-labelledby="all-posts">
+    <h2 id="all-posts" class="text-minor visually-hidden">All posts</h2>
+    <div class="post-grid">
+      {content.blog.map((p) => (
+        <article class="post-card">
+          <a class="post-card__link" href={`/blog/${p.slug}`}>
+            <p class="text-micro post-card__date">{fmt(p.date)}</p>
+            <h3 class="post-card__title text-body">{p.title}</h3>
+            <p class="post-card__desc text-small">{p.description}</p>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .crumb {
+    font-family: var(--font-mono);
+    font-size: var(--t-micro);
+    letter-spacing: var(--track-micro);
+    text-transform: uppercase;
+    color: var(--fg-3);
+    display: flex; gap: 0.75rem; align-items: center;
+    padding: 2.5rem 1.5rem 0; max-width: 72rem; margin: 0 auto;
+  }
+  .crumb a { color: var(--fg-3); }
+  .crumb a:hover { color: var(--accent); }
+  .page-head { max-width: 72rem; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+  .page-head h1 { margin: 0 0 1.5rem; }
+  .lede { max-width: 42rem; color: var(--fg-2); }
+  .posts { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem 6rem; }
+  .post-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); border-radius: 0.75rem; overflow: hidden; }
+  .post-card { background: var(--bg); }
+  .post-card__link { display: block; padding: 1.75rem 1.5rem; text-decoration: none; color: inherit; height: 100%; }
+  .post-card__link:hover { background: var(--bg-plate); }
+  .post-card__date { color: var(--fg-3); margin: 0 0 0.75rem; }
+  .post-card__title { margin: 0 0 0.75rem; font-weight: var(--w-mid); line-height: 1.35; }
+  .post-card__link:hover .post-card__title { color: var(--accent); }
+  .post-card__desc { margin: 0; color: var(--fg-3); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>

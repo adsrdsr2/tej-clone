@@ -1,0 +1,136 @@
+---
+/* /speaking — topics, formats, verified fees, booking CTA. */
+import Base from "../layouts/Base.astro";
+
+const topics = [
+  { title: "Evals in AI", note: "How to measure what your AI systems actually do." },
+  { title: "Harnesses in AI", note: "The scaffolding that makes agents reliable." },
+  { title: "The New UX", note: "Frontend after AI: interfaces for the agent age." },
+  { title: "AI productivity for developers", note: "Maximizing output with AI agents in real teams." },
+  { title: "How React actually works", note: "From the author of Fluent React: internals, not API docs." },
+];
+
+const fees = [
+  { kind: "Keynote — corporate", format: "In person", price: "€12,000" },
+  { kind: "Keynote — corporate", format: "Virtual", price: "€6,000" },
+  { kind: "Conference", format: "In person", price: "€6,000" },
+  { kind: "Conference", format: "Virtual", price: "€3,000" },
+  { kind: "MC", format: "Per day", price: "€5,000" },
+];
+---
+
+<Base
+  title="Book Tejas Kumar: AI Keynote Speaker in Berlin"
+  description="Book Tejas Kumar as an AI keynote speaker: topics, formats, fees and how to reserve your date."
+  current="/speaking"
+  routeName="/speaking"
+>
+  <nav aria-label="Breadcrumb" class="crumb">
+    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Speaking</span>
+  </nav>
+
+  <header class="page-head">
+    <h1 class="text-major">Invite me to speak.</h1>
+    <p class="text-lede lede">
+      I keynote about AI engineering, agentic systems, and how React actually
+      works — on stages in 31 countries and counting.
+    </p>
+  </header>
+
+  <section aria-labelledby="topics">
+    <h2 id="topics" class="text-minor">Topics</h2>
+    <ul class="topics">
+      {topics.map((t) => (
+        <li>
+          <h3 class="text-body topic-title">{t.title}</h3>
+          <p class="topic-note">{t.note}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section aria-labelledby="formats">
+    <h2 id="formats" class="text-minor">Formats &amp; fees</h2>
+    <div class="table-wrap">
+      <table class="fees">
+        <caption class="visually-hidden">Speaking fees by engagement type</caption>
+        <thead>
+          <tr>
+            <th scope="col">Engagement</th>
+            <th scope="col">Format</th>
+            <th scope="col">Fee</th>
+          </tr>
+        </thead>
+        <tbody>
+          {fees.map((f) => (
+            <tr>
+              <th scope="row">{f.kind}</th>
+              <td>{f.format}</td>
+              <td class="price">{f.price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-small fineprint">
+      Fees exclude travel and accommodation for in-person engagements. See{" "}
+      <a href="/calendar">my calendar</a> for availability.
+    </p>
+  </section>
+
+  <section aria-labelledby="book">
+    <h2 id="book" class="text-minor">Reserve your date</h2>
+    <p class="text-body">
+      Dates go fast — especially for conference season. Tell me about your
+      event and I'll confirm availability.
+    </p>
+    <p class="cta-row">
+      <a class="btn" href="/contact">Book Tejas</a>
+      <a class="btn btn--ghost" href="/calendar">Check availability</a>
+    </p>
+  </section>
+</Base>
+
+<style>
+  .crumb {
+    font-family: var(--font-mono);
+    font-size: var(--t-micro);
+    letter-spacing: var(--track-micro);
+    text-transform: uppercase;
+    color: var(--fg-3);
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 2.5rem 1.5rem 0;
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+  .crumb a { color: var(--fg-3); }
+  .crumb a:hover { color: var(--accent); }
+  .page-head { max-width: 72rem; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+  .page-head h1 { margin: 0 0 1.5rem; }
+  .lede { max-width: 42rem; color: var(--fg-2); }
+  section { max-width: 72rem; margin: 0 auto; padding: 2.5rem 1.5rem; border-top: 1px solid var(--hairline); }
+  section h2 { margin: 0 0 1.75rem; }
+  .topics { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); border-radius: 0.75rem; overflow: hidden; }
+  .topics li { background: var(--bg); padding: 1.5rem; }
+  .topic-title { margin: 0 0 0.5rem; font-weight: var(--w-mid); }
+  .topic-note { margin: 0; color: var(--fg-3); font-size: var(--t-small); }
+  .table-wrap { overflow-x: auto; }
+  .fees { width: 100%; border-collapse: collapse; min-width: 32rem; }
+  .fees th, .fees td { text-align: left; padding: 1rem 0.75rem; border-bottom: 1px solid var(--hairline); }
+  .fees thead th { font-family: var(--font-mono); font-size: var(--t-label); letter-spacing: var(--track-label); text-transform: uppercase; color: var(--fg-3); }
+  .fees tbody th { font-weight: var(--w-mid); }
+  .price { font-family: var(--font-mono); color: var(--accent); white-space: nowrap; }
+  .fineprint { color: var(--fg-3); margin-top: 1.25rem; max-width: 46rem; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+  .btn {
+    display: inline-block; padding: 0.9rem 1.75rem; border-radius: 999px;
+    background: var(--accent); color: var(--on-red);
+    font-family: var(--font-mono); font-size: var(--t-label);
+    letter-spacing: var(--track-label); text-transform: uppercase; text-decoration: none;
+  }
+  .btn--ghost { background: transparent; color: var(--fg); border: 1px solid var(--hairline-lit); }
+  .btn:hover { opacity: 0.88; }
+</style>

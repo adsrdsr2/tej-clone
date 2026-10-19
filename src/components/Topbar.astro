@@ -1,0 +1,351 @@
+---
+/* Shared site header. Byte-identical markup across pages except the
+   active-state markers (aria-current / data-current). */
+interface Props {
+  current?: string;
+}
+const { current = "/" } = Astro.props;
+
+const primary = [
+  { href: "/speaking", label: "Speaking" },
+  { href: "/story", label: "Story" },
+  { href: "/podcast", label: "Podcast" },
+  { href: "/blog", label: "Blog" },
+];
+const more = [
+  { href: "/calendar", label: "Calendar", note: "Where I'll be next" },
+  { href: "/workshops", label: "Workshops", note: "I teach your team" },
+  { href: "/react", label: "Book", note: "Fluent React" },
+  { href: "/about", label: "About", note: "The long version" },
+  { href: "/status", label: "Status", note: "How I'm doing today" },
+  { href: "/investing", label: "Investing", note: "Startups I back" },
+  { href: "/#contact", label: "Contact", note: "Say hello" },
+];
+const isMoreActive = more.some((m) => m.href === current);
+const phoneNav = [...primary, ...more];
+---
+
+<header class="topbar">
+  <a class="topbar__logo" href="/" aria-label="Tejas Kumar — home">
+    <span class="topbar__wordmark">TEJAS KUMAR<span class="dot">.</span></span>
+  </a>
+
+  <nav class="topbar__nav" aria-label="Primary">
+    <ul>
+      {primary.map((l) => (
+        <li>
+          <a href={l.href} aria-current={current === l.href ? "page" : undefined}>{l.label}</a>
+        </li>
+      ))}
+      <li>
+        <button
+          type="button"
+          class="topbar__more-btn"
+          popovertarget="nav-more"
+          aria-label="More pages"
+          aria-expanded="false"
+          data-current={isMoreActive ? "true" : undefined}
+        >
+          <span>More</span>
+          <svg class="topbar__more-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <button type="button" class="theme" aria-label="Switch theme" aria-pressed="false" data-theme-toggle>
+    <svg class="theme__sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"/></svg>
+    <svg class="theme__moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+    <span data-theme-label class="theme__label">Light</span>
+  </button>
+
+  <!-- mobile pill contents (visible ≤767px) -->
+  <div class="topbar__pill" aria-hidden="false">
+    <a class="pill__btn" href="/" aria-label="Home">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+    </a>
+    <button type="button" class="pill__btn" data-scroll-top aria-label="Scroll to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+    <button type="button" class="pill__btn theme" aria-label="Switch theme" aria-pressed="false" data-theme-toggle>
+      <svg class="theme__sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"/></svg>
+      <svg class="theme__moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+    </button>
+  </div>
+
+  <div id="nav-more" popover class="navpop">
+    <ul class="navpop__list">
+      {more.map((m) => (
+        <li>
+          <a href={m.href} aria-current={current === m.href ? "page" : undefined}>
+            <span class="navpop__label">{m.label}</span>
+            <span class="navpop__note">{m.note}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <ul class="navpop__phone" aria-label="Primary">
+      {phoneNav.map((l) => (
+        <li>
+          <a href={l.href} aria-current={current === l.href ? "page" : undefined}>
+            <span class="navpop__label">{l.label}</span>
+            {"note" in l ? <span class="navpop__note">{l.note}</span> : null}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</header>
+
+<style>
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.15rem var(--gutter);
+    border-bottom: 1px solid var(--hairline);
+    background: color-mix(in srgb, var(--bg) 78%, transparent);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+  }
+  .topbar__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-family: var(--font-display);
+    font-weight: var(--w-heavy);
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+  }
+  .topbar__logo .dot { color: var(--accent); }
+  .topbar__home-ic { display: none; }
+  .topbar__nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .topbar__nav a,
+  .topbar__more-btn {
+    font-family: var(--font-mono);
+    font-size: var(--t-micro);
+    letter-spacing: var(--track-micro);
+    text-transform: uppercase;
+    color: var(--fg-label);
+    transition: color var(--dur-fast) var(--ease);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .topbar__nav a:hover,
+  .topbar__more-btn:hover,
+  .topbar__nav a[aria-current="page"],
+  .topbar__more-btn[data-current] {
+    color: var(--fg);
+  }
+  .topbar__more-chevron {
+    transition: rotate var(--dur-fast) var(--ease);
+  }
+  .topbar__more-btn[aria-expanded="true"] .topbar__more-chevron {
+    rotate: 180deg;
+  }
+
+  /* theme toggle */
+  .theme {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: var(--t-micro);
+    letter-spacing: var(--track-micro);
+    text-transform: uppercase;
+    color: var(--fg-label);
+    transition: color var(--dur-fast) var(--ease);
+  }
+  .theme:hover { color: var(--fg); }
+  .theme__moon { display: none; }
+  :root[data-theme="dark"] .theme__sun { display: none; }
+  :root[data-theme="dark"] .theme__moon { display: block; }
+
+  .topbar__more-btn {
+    anchor-name: --more-btn;
+  }
+
+  /* native popover */
+  .navpop {
+    position: fixed;
+    position-anchor: --more-btn;
+    top: anchor(bottom);
+    left: anchor(center);
+    transform: translate(-50%, 0.6rem);
+    margin: 0;
+    padding: 0.75rem;
+    border: 1px solid var(--hairline);
+    border-radius: 1.1rem;
+    background: var(--bg-plate);
+    color: var(--fg);
+    box-shadow:
+      0 1px 2px color-mix(in srgb, var(--void) 12%, transparent),
+      0 8px 24px color-mix(in srgb, var(--void) 22%, transparent),
+      0 24px 64px color-mix(in srgb, var(--void) 28%, transparent),
+      inset 0 1px 0 color-mix(in srgb, var(--bone) 8%, transparent);
+    min-width: 17rem;
+    opacity: 0;
+    scale: 0.96;
+    translate: 0 -6px;
+    transition:
+      opacity var(--dur-fast) var(--ease),
+      scale var(--dur) var(--ease),
+      translate var(--dur) var(--ease),
+      overlay var(--dur) allow-discrete,
+      display var(--dur) allow-discrete;
+  }
+  .navpop:popover-open {
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+  @starting-style {
+    .navpop:popover-open {
+      opacity: 0;
+      scale: 0.96;
+      translate: 0 -6px;
+    }
+  }
+  .navpop__list,
+  .navpop__phone {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .navpop__phone { display: none; }
+  .navpop a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.7rem 0.9rem;
+    border-radius: 0.85rem;
+    min-block-size: 44px;
+    justify-content: center;
+    transition: background-color var(--dur-fast) var(--ease);
+  }
+  .navpop a:hover { background: color-mix(in srgb, var(--fg) 7%, transparent); }
+  .navpop__label {
+    font-family: var(--font-mono);
+    font-size: var(--t-label);
+    letter-spacing: var(--track-label);
+    text-transform: uppercase;
+  }
+  .navpop__note {
+    font-size: var(--t-small);
+    color: var(--fg-2);
+  }
+
+  /* mobile pill (≤767px) */
+  .topbar__pill { display: none; }
+  @media (width <= 767px) {
+    .topbar {
+      position: fixed;
+      top: auto;
+      bottom: max(1rem, env(safe-area-inset-bottom));
+      left: 50%;
+      transform: translateX(-50%);
+      width: fit-content;
+      max-width: calc(100% - 1.5rem);
+      padding: 0.55rem 1.1rem;
+      border: 1px solid var(--hairline-lit);
+      border-radius: var(--r-pill);
+      background: color-mix(in srgb, var(--nav-plate) var(--nav-glass), transparent);
+      backdrop-filter: blur(12px) saturate(190%);
+      -webkit-backdrop-filter: blur(12px) saturate(190%);
+      box-shadow:
+        inset 0 1px 1px color-mix(in srgb, var(--bone) 22%, transparent),
+        inset 0 -1px 1px color-mix(in srgb, var(--void) 12%, transparent),
+        0 8px 28px color-mix(in srgb, var(--void) 30%, transparent);
+      color: var(--nav-ink);
+    }
+    .topbar__logo, .topbar__nav, .topbar > .theme { display: none; }
+    .topbar__pill {
+      display: flex;
+      align-items: center;
+      gap: 1.35rem;
+    }
+    .pill__btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      min-height: 44px;
+      color: inherit;
+    }
+    .pill__btn .theme__label { display: none; }
+    .navpop__list { display: none; }
+    .navpop__phone { display: block; }
+    .navpop {
+      position: fixed;
+      inset: auto 0 max(5.5rem, calc(env(safe-area-inset-bottom) + 4.5rem)) 0;
+      margin-inline: auto;
+      max-width: calc(100% - 2rem);
+    }
+  }
+</style>
+
+<script>
+  // theme init + toggle, popover aria-expanded sync, scroll-to-top
+  (() => {
+    const root = document.documentElement;
+    const apply = (t) => {
+      root.setAttribute("data-theme", t);
+      document.querySelectorAll("[data-theme-toggle]").forEach((btn) => {
+        btn.setAttribute("aria-pressed", String(t === "dark"));
+        const label = btn.querySelector("[data-theme-label]");
+        if (label) label.textContent = t === "dark" ? "Dark" : "Light";
+      });
+      try { localStorage.setItem("theme", t); } catch {}
+    };
+    const stored = (() => { try { return localStorage.getItem("theme"); } catch { return null; } })();
+    if (stored === "light" || stored === "dark") {
+      if (!root.hasAttribute("data-theme")) root.setAttribute("data-theme", stored);
+    }
+    // sync initial label from the blocking head script's decision
+    const initial = root.getAttribute("data-theme") || "dark";
+    document.querySelectorAll("[data-theme-toggle]").forEach((btn) => {
+      btn.setAttribute("aria-pressed", String(initial === "dark"));
+      const label = btn.querySelector("[data-theme-label]");
+      if (label) label.textContent = initial === "dark" ? "Dark" : "Light";
+      btn.addEventListener("click", () => {
+        const next = (root.getAttribute("data-theme") || "dark") === "dark" ? "light" : "dark";
+        apply(next);
+      });
+    });
+    // follow OS until the user picks explicitly
+    if (!stored) {
+      const mq = matchMedia("(prefers-color-scheme: light)");
+      mq.addEventListener("change", (e) => apply(e.matches ? "light" : "dark"));
+    }
+    // popover aria-expanded (accessibility improvement)
+    const moreBtn = document.querySelector(".topbar__more-btn");
+    const pop = document.getElementById("nav-more");
+    if (moreBtn && pop) {
+      const sync = () => moreBtn.setAttribute("aria-expanded", String(pop.matches(":popover-open")));
+      pop.addEventListener("toggle", sync);
+      sync();
+    }
+    // scroll to top
+    document.querySelectorAll("[data-scroll-top]").forEach((b) =>
+      b.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }))
+    );
+    // local no-op analytics adapter (never phones home)
+    document.addEventListener("click", (e) => {
+      const t = e.target.closest("[data-track]");
+      if (t && window.__analytics) window.__analytics(t.dataset);
+    });
+    window.__analytics = null;
+  })();
+</script>

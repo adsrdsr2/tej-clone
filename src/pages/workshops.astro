@@ -1,0 +1,101 @@
+---
+/* /workshops — team training offers, formats, contact CTA. */
+import Base from "../layouts/Base.astro";
+
+const offers = [
+  {
+    title: "Agentic AI for teams",
+    note: "Evals, harnesses, and tool calls: how real teams ship reliable agents.",
+  },
+  {
+    title: "React internals for teams",
+    note: "How React actually works — from the author of Fluent React — so your team stops guessing.",
+  },
+];
+
+const formats = ["Half-day", "Full-day", "Two-day intensive", "Remote or on-site"];
+---
+
+<Base
+  title="Agentic AI Training and React Workshops for Teams"
+  description="Agentic AI training and React workshops for engineering teams, taught by Tejas Kumar. Formats, topics, and how to book."
+  current="/workshops"
+  routeName="/workshops"
+>
+  <nav aria-label="Breadcrumb" class="crumb">
+    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Workshops</span>
+  </nav>
+
+  <header class="page-head">
+    <h1 class="text-major">AI and React training for your team.</h1>
+    <p class="text-lede lede">
+      Hands-on workshops for engineering teams — agentic AI that ships, and
+      React understood from the inside out.
+    </p>
+  </header>
+
+  <section aria-labelledby="offers">
+    <h2 id="offers" class="text-minor">Workshop offers</h2>
+    <ul class="offers">
+      {offers.map((o) => (
+        <li>
+          <h3 class="text-body offer-title">{o.title}</h3>
+          <p class="offer-note">{o.note}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section aria-labelledby="formats">
+    <h2 id="formats" class="text-minor">Formats</h2>
+    <ul class="formats">
+      {formats.map((f) => (
+        <li class="text-body">{f}</li>
+      ))}
+    </ul>
+  </section>
+
+  <section aria-labelledby="book-workshop">
+    <h2 id="book-workshop" class="text-minor">Bring me to your team</h2>
+    <p class="text-body">
+      Tell me about your team and what you're trying to learn — I'll shape the
+      workshop around it.
+    </p>
+    <p class="cta-row">
+      <a class="btn" href="/contact">Get in touch</a>
+    </p>
+  </section>
+</Base>
+
+<style>
+  .crumb {
+    font-family: var(--font-mono);
+    font-size: var(--t-micro);
+    letter-spacing: var(--track-micro);
+    text-transform: uppercase;
+    color: var(--fg-3);
+    display: flex; gap: 0.75rem; align-items: center;
+    padding: 2.5rem 1.5rem 0; max-width: 72rem; margin: 0 auto;
+  }
+  .crumb a { color: var(--fg-3); }
+  .crumb a:hover { color: var(--accent); }
+  .page-head { max-width: 72rem; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+  .page-head h1 { margin: 0 0 1.5rem; }
+  .lede { max-width: 42rem; color: var(--fg-2); }
+  section { max-width: 72rem; margin: 0 auto; padding: 2.5rem 1.5rem; border-top: 1px solid var(--hairline); }
+  section h2 { margin: 0 0 1.75rem; }
+  .offers { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); border-radius: 0.75rem; overflow: hidden; }
+  .offers li { background: var(--bg); padding: 1.75rem 1.5rem; }
+  .offer-title { margin: 0 0 0.5rem; font-weight: var(--w-mid); }
+  .offer-note { margin: 0; color: var(--fg-3); font-size: var(--t-small); }
+  .formats { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .formats li { border: 1px solid var(--hairline-lit); border-radius: 999px; padding: 0.6rem 1.25rem; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+  .btn {
+    display: inline-block; padding: 0.9rem 1.75rem; border-radius: 999px;
+    background: var(--accent); color: var(--on-red);
+    font-family: var(--font-mono); font-size: var(--t-label);
+    letter-spacing: var(--track-label); text-transform: uppercase; text-decoration: none;
+  }
+  .btn:hover { opacity: 0.88; }
+</style>

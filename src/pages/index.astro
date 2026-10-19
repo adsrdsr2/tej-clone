@@ -1,0 +1,672 @@
+---
+/* Home page — 6 sections per the verified spec:
+   1. Hero  2. Speaking (CoverFlow)  3. Fluent React book promo + PraiseWall
+   4. Ask widget island  5. Latest writing / podcast promos  6. Contact CTA.
+
+   No entrance/reveal animation (verified absent from the reference).
+   CoverFlow and AskWidget are built by sibling subagents under a fixed
+   contract; they are imported here as specified.
+
+   Hero details verified against the reference snapshot's own markup
+   (project-root index.html): h1 uses text-colossal (180px @1440x900),
+   side-by-side grid at >=768px (md:), eyebrows hidden below 768px,
+   lede in fg-2, real logo SVGs (IBM/Spotify/Vercel/Xata) as external
+   links with brand hover colors, "and more" -> LinkedIn. */
+import Base from "../layouts/Base.astro";
+import CoverFlow from "../components/CoverFlow.astro";
+import AskWidget from "../islands/AskWidget.tsx";
+import content from "../data/content.json";
+
+const title = "Tejas Kumar: AI Engineer, Speaker, Author of Fluent React";
+
+const latestPosts = [...content.blog]
+  .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
+  .slice(0, 3);
+const latestEpisodes = content.episodes.slice(0, 3);
+
+const IBM_SVG = `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1075 401.15" aria-hidden="true"><g fill="currentColor"><g><rect y="373.17" width="194.43" height="27.932"></rect><rect y="319.83" width="194.43" height="27.932"></rect><rect x="55.468" y="266.54" width="83.399" height="27.932"></rect><rect x="55.468" y="213.25" width="83.399" height="27.932"></rect><rect x="55.468" y="159.96" width="83.399" height="27.932"></rect><rect x="55.468" y="106.58" width="83.399" height="27.932"></rect><rect y="53.288" width="194.43" height="27.932"></rect><rect width="194.43" height="27.932"></rect></g><g><path d="m222.17 400.85 207.11 0.297c27.734 0 52.793-10.697 71.513-27.932h-278.62z"></path><path d="m222.17 347.76h299.03c5.051-8.617 8.815-18.027 11.094-27.932h-310.12z"></path><rect x="277.73" y="266.54" width="83.3" height="27.932"></rect><path d="m444.43 266.54v27.932h90.927c0-9.608-1.288-19.017-3.764-27.932z"></path><path d="m497.92 213.25h-220.19v27.932h243.46c-6.34-10.698-14.165-20.107-23.277-27.932z"></path><path d="m277.73 159.96v27.932h220.19c9.311-7.825 17.135-17.235 23.277-27.932z"></path><rect x="277.73" y="106.58" width="83.3" height="27.932"></rect><path d="m444.43 134.51h87.163c2.476-8.914 3.764-18.324 3.764-27.932h-90.927z"></path><path d="m521.2 53.288h-299.03v27.932h310.12c-2.575-9.905-6.339-19.314-11.093-27.932z"></path><path d="m429.28 0h-207.11v27.932h278.53c-18.621-17.235-43.878-27.932-71.414-27.932z"></path></g><g><polygon points="555.57 81.22 742.67 81.22 733.06 53.288 555.57 53.288"></polygon><polygon points="555.57 27.932 724.25 27.932 714.64 0 555.57 0"></polygon><polygon points="861.03 401.17 861.03 373.24 1e3 373.24 1e3 401.17" stroke-width="1.0018"></polygon><polygon points="861.03 347.76 861.03 319.83 1e3 319.83 1e3 347.76"></polygon><polygon points="777.73 182.54 769.91 159.96 694.43 159.96 611.03 159.96 611.03 187.89 694.43 187.89 694.43 162.24 703.25 187.89 852.22 187.89 861.03 162.24 861.03 187.89 944.43 187.89 944.43 159.96 861.03 159.96 785.56 159.96"></polygon><polygon points="944.43 106.58 803.98 106.58 794.37 134.51 944.43 134.51"></polygon><polygon points="1e3 27.932 1e3 0 840.93 0 831.32 27.932"></polygon><polygon points="768.13 373.22 777.73 400.85 787.34 373.22"></polygon><polygon points="749.5 319.83 759.31 347.76 796.16 347.76 806.06 319.83"></polygon><polygon points="730.78 266.54 740.59 294.47 814.88 294.47 824.68 266.54"></polygon><polygon points="721.97 241.18 833.6 241.18 843.11 213.25 712.36 213.25"></polygon><polygon points="611.03 134.51 761.09 134.51 751.49 106.58 611.03 106.58"></polygon><polygon points="1e3 53.288 822.4 53.288 812.9 81.22 1e3 81.22"></polygon><rect x="555.57" y="373.22" width="138.97" height="27.932"></rect><rect x="555.57" y="319.83" width="138.97" height="27.932"></rect><rect x="611.03" y="266.54" width="83.399" height="27.932"></rect><rect x="611.03" y="213.25" width="83.399" height="27.932"></rect><rect x="861.03" y="213.25" width="83.399" height="27.932"></rect><rect x="861.03" y="266.54" width="83.399" height="27.932"></rect></g><path d="m1052 357.15a22 22 0 0 0-22 22 22 22 0 0 0 22 22 22 22 0 0 0 22-22 22 22 0 0 0-22-22zm0 4a18 18 0 0 1 18 18 18 18 0 0 1-18 18 18 18 0 0 1-18-18 18 18 0 0 1 18-18zm-9.3476 6.793v22.414h5.453v-7.7305h3.0978l4.164 7.7305h5.9804l-5.0234-8.582c2.4616-0.96446 4.0624-3.2158 4.0624-6.75 0-4.0818-2.5594-7.082-7.582-7.082zm5.453 4.2891h4.0548c1.7114 0 2.668 0.75016 2.668 2.3555v1.6133c0 1.6053-0.9566 2.3594-2.668 2.3594h-4.0548z"></path></g></svg>`;
+const SPOTIFY_SVG = `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 168 168" aria-hidden="true"><path fill="currentColor" d="m83.996 0.277c-46.249 0-83.743 37.493-83.743 83.742 0 46.251 37.494 83.741 83.743 83.741 46.254 0 83.744-37.49 83.744-83.741 0-46.246-37.49-83.738-83.745-83.738l0.001-0.004zm38.404 120.78c-1.5 2.46-4.72 3.24-7.18 1.73-19.662-12.01-44.414-14.73-73.564-8.07-2.809 0.64-5.609-1.12-6.249-3.93-0.643-2.81 1.11-5.61 3.926-6.25 31.9-7.291 59.263-4.15 81.337 9.34 2.46 1.51 3.24 4.72 1.73 7.18zm10.25-22.805c-1.89 3.075-5.91 4.045-8.98 2.155-22.51-13.839-56.823-17.846-83.448-9.764-3.453 1.043-7.1-0.903-8.148-4.35-1.04-3.453 0.907-7.093 4.354-8.143 30.413-9.228 68.222-4.758 94.072 11.127 3.07 1.89 4.04 5.91 2.15 8.976v-0.001zm0.88-23.744c-26.99-16.031-71.52-17.505-97.289-9.684-4.138 1.255-8.514-1.081-9.768-5.219-1.254-4.14 1.08-8.513 5.221-9.771 29.581-8.98 78.756-7.245 109.83 11.202 3.73 2.209 4.95 7.016 2.74 10.733-2.2 3.722-7.02 4.949-10.73 2.739z"></path></svg>`;
+const VERCEL_SVG = `<svg viewBox="0 0 76 65" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M37.5274 0L75.0548 65H0L37.5274 0Z" fill="currentColor"/></svg>`;
+const XATA_SVG = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M0.500006 6.60213C0.502672 8.8784 1.41054 11.0604 3.02388 12.6681L8.74744 18.3712C8.94576 18.5689 9.26796 18.5694 9.45379 18.36C10.8453 16.792 11.6185 14.7641 11.6161 12.6571C11.6134 10.3808 10.7055 8.19885 9.09219 6.59116L3.863 1.38063C3.39169 0.910967 2.6205 0.907598 2.2208 1.43942C1.10825 2.91967 0.497813 4.72971 0.500006 6.60213Z"></path><path d="M20.9762 12.6339C22.5896 11.0262 23.4974 8.84422 23.5001 6.56795C23.5023 4.69553 22.8919 2.88549 21.7793 1.40524C21.3796 0.873419 20.6084 0.876787 20.1371 1.34645L14.9081 6.55711C13.2948 8.1648 12.3867 10.3466 12.384 12.6229C12.3816 14.7298 13.1548 16.7578 14.5463 18.3258C14.7321 18.5352 15.0543 18.5346 15.2527 18.337L20.9762 12.6339Z"></path><path d="M19.1009 22.914C19.5712 23.3849 20.3403 23.3894 20.7607 22.8736C21.9251 21.4455 22.7 19.7984 22.9533 18.1782C23.2301 16.408 22.864 14.8001 21.9329 13.6368C21.758 13.4182 21.4346 13.4193 21.2363 13.617L15.8719 18.9625C15.6732 19.1605 15.6729 19.482 15.871 19.6804L19.1009 22.914Z"></path><path d="M3.23951 22.9088C3.65998 23.4245 4.42907 23.42 4.89936 22.9492L8.12918 19.7156C8.32737 19.5172 8.32699 19.1956 8.12834 18.9977L2.76398 13.6521C2.56566 13.4545 2.24224 13.4533 2.0673 13.6719C1.13627 14.8353 0.770182 16.4432 1.04694 18.2133C1.30027 19.8336 2.07513 21.4807 3.23951 22.9088Z"></path></svg>`;
+---
+
+<Base title={title} current="/" routeName="/">
+  <!-- ============ 1. HERO ============ -->
+  <section class="hero" aria-label="Introduction">
+    <span class="hero__rule" aria-hidden="true"></span>
+    <div class="shell hero__inner">
+      <div class="hero__eyebrows">
+        <span class="text-micro">Berlin</span>
+        <span class="text-micro">AI Engineer, IBM</span>
+      </div>
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <h1 class="text-colossal hero__title">
+            I&rsquo;m Tejas Kumar<span class="hero__comma">,</span>
+          </h1>
+          <p class="text-lede hero__lede">
+            and I&rsquo;ve been building on the web for over 25 years, at places
+            like
+          </p>
+          <ul class="hero__logos" aria-label="Places Tejas has worked">
+            <li>
+              <a
+                class="hero__logo-link hero__logo-link--ibm"
+                href="https://ibm.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="IBM"
+              >
+                <Fragment set:html={IBM_SVG} />
+              </a>
+            </li>
+            <li>
+              <a
+                class="hero__logo-link hero__logo-link--spotify"
+                href="https://spotify.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Spotify"
+              >
+                <Fragment set:html={SPOTIFY_SVG} />
+              </a>
+            </li>
+            <li>
+              <a
+                class="hero__logo-link hero__logo-link--vercel"
+                href="https://vercel.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Vercel"
+              >
+                <Fragment set:html={VERCEL_SVG} />
+              </a>
+            </li>
+            <li>
+              <a
+                class="hero__logo-link hero__logo-link--xata"
+                href="https://xata.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Xata"
+              >
+                <Fragment set:html={XATA_SVG} />
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-micro hero__more"
+                href="https://linkedin.com/in/tejasq"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Tejas on LinkedIn"
+              >
+                and more
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="hero__portrait">
+          <img
+            src="/img/tejas-hero.png"
+            alt="Tejas Kumar, AI Engineer at IBM, based in Berlin"
+            width="880"
+            height="880"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. SPEAKING ============ -->
+  <CoverFlow />
+
+  <!-- ============ 3. FLUENT REACT BOOK PROMO ============ -->
+  <section class="book" aria-labelledby="book-heading">
+    <div class="shell">
+      <div class="book__grid">
+        <div class="book__copy">
+          <h2 id="book-heading" class="text-major">How React actually works.</h2>
+          <p class="text-lede book__lede">
+            <em>Fluent React</em> is my book on React &mdash; what happens between
+            your JSX and the pixels on screen, and the mental models that make
+            it all click.
+          </p>
+          <a class="cta" href="/react">
+            <span>About the book</span>
+            <span class="cta__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+        <div class="book__art">
+          <!-- PLACEHOLDER: the real cover artwork is not in the evidence package. -->
+          <div
+            class="book-cover"
+            role="img"
+            aria-label="Fluent React book cover (placeholder artwork)"
+          >
+            <span class="book-cover__band" aria-hidden="true"></span>
+            <span class="text-micro book-cover__kicker">Tejas Kumar</span>
+            <span class="book-cover__title">Fluent<br />React</span>
+            <span class="text-micro book-cover__sub"
+              >How React actually works</span
+            >
+          </div>
+          <p class="text-micro book__caption">
+            Cover placeholder &mdash; original artwork not in evidence package.
+          </p>
+        </div>
+      </div>
+
+      <h3 class="text-minor praise__heading" id="praise-heading">Praise</h3>
+      <div class="praise" aria-labelledby="praise-heading">
+        {
+          [
+            "Sample praise card one. Real reader quotes are not in the evidence package, so no names, handles, or testimonials are reproduced here.",
+            "Sample praise card two. This wall shows the layout only; every card is a clearly-labeled placeholder.",
+            "Sample praise card three. The original quotes live on the live site and were not captured for this clone.",
+            "Sample praise card four. Placeholder text keeps the masonry rhythm without fabricating endorsements.",
+            "Sample praise card five. When real quotes become available, they replace these cards one by one.",
+            "Sample praise card six. Nothing here is presented as a genuine reader testimonial.",
+          ].map((text, i) => (
+            <article class="praise-card">
+              <p class="text-micro praise-card__badge">
+                Sample praise &mdash; original quotes not in evidence package
+              </p>
+              <p class="praise-card__text">{text}</p>
+              <footer class="praise-card__meta">
+                <span class="praise-card__avatar" aria-hidden="true" />
+                <span class="praise-card__who">
+                  <strong>Sample Reader {i + 1}</strong>
+                  <span class="text-micro">@sample_handle</span>
+                </span>
+              </footer>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. ASK WIDGET ============ -->
+  <section class="ask" aria-labelledby="ask-heading">
+    <div class="shell">
+      <h2 id="ask-heading" class="text-major">Ask my podcast.</h2>
+      <p class="text-lede ask__lede">
+        Search 98 episodes of <em>ConTejas Code</em> with AI &mdash; ask a
+        question, get answers drawn from the conversations.
+      </p>
+      <div class="ask__widget">
+        <AskWidget client:visible />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. LATEST WRITING / PODCAST PROMOS ============ -->
+  <section class="promos" aria-label="Latest writing and podcast episodes">
+    <div class="shell promos__grid">
+      <article class="promo-card">
+        <p class="text-micro promo-card__eyebrow">Blog</p>
+        <h2 class="text-minor promo-card__title">
+          <a href="/blog">Latest writing</a>
+        </h2>
+        <ul class="promo-card__list">
+          {
+            latestPosts.map((post) => (
+              <li>
+                <a href={`/blog/${post.slug}`}>{post.title}</a>
+              </li>
+            ))
+          }
+        </ul>
+        <a class="promo-card__more" href="/blog">
+          <span>All 31 posts</span>
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+      </article>
+      <article class="promo-card">
+        <p class="text-micro promo-card__eyebrow">Podcast</p>
+        <h2 class="text-minor promo-card__title">
+          <a href="/podcast">ConTejas Code</a>
+        </h2>
+        <ul class="promo-card__list">
+          {
+            latestEpisodes.map((ep) => (
+              <li>
+                <a href={`/podcast/ep/${ep.slug}`}>{ep.title}</a>
+              </li>
+            ))
+          }
+        </ul>
+        <a class="promo-card__more" href="/podcast">
+          <span>All 98 episodes</span>
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 6. CONTACT CTA ============ -->
+  <section class="contact" id="contact" aria-labelledby="contact-heading">
+    <div class="shell contact__inner">
+      <h2 id="contact-heading" class="text-major">Say hello.</h2>
+      <p class="text-lede contact__lede">
+        Keynote, workshop, podcast guest, or just a good conversation &mdash; my
+        inbox is open.
+      </p>
+      <!-- PLACEHOLDER: the real email address is not in the evidence package. -->
+      <a class="cta cta--big" href="mailto:hello@tej-clone.local">
+        <span>Say hello</span>
+        <span class="cta__arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* ---------- shared CTA (verified pattern: red block, mono uppercase, arrow nudge) ---------- */
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-top: var(--air-s);
+    padding: 1rem 1.6rem;
+    background: var(--accent);
+    color: var(--on-red);
+    font-family: var(--font-mono);
+    font-size: var(--t-label);
+    letter-spacing: var(--track-label);
+    text-transform: uppercase;
+    border-radius: var(--r-1);
+    transition: background-color var(--dur-fast) var(--ease),
+      transform var(--dur-fast) var(--ease);
+  }
+  .cta:hover {
+    background: color-mix(in srgb, var(--accent) 88%, var(--void));
+  }
+  .cta__arrow {
+    display: inline-block;
+    transition: transform var(--dur-fast) var(--ease);
+  }
+  .cta:hover .cta__arrow {
+    transform: translateX(0.3rem);
+  }
+  .cta--big {
+    padding: 1.25rem 2.2rem;
+  }
+
+  /* ---------- 1. hero ---------- */
+  .hero {
+    position: relative;
+    border-bottom: 1px solid var(--hairline);
+    overflow-x: clip;
+  }
+  .hero__rule {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--rail);
+    width: 1px;
+    background: var(--accent);
+  }
+  .hero__inner {
+    position: relative;
+    padding-top: var(--air-m);
+  }
+  .hero__eyebrows {
+    display: none;
+  }
+  .hero__grid {
+    display: grid;
+    gap: var(--air-m);
+  }
+  .hero__comma {
+    color: var(--accent);
+    display: inline-block;
+    font-style: italic;
+    transform: rotate(10deg) translateY(-0.02em);
+  }
+  .hero__lede {
+    margin-top: var(--air-m);
+    max-width: var(--measure-lede);
+    color: var(--fg-2);
+  }
+  .hero__logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--air-s);
+    margin: var(--air-s) 0 0;
+    padding: 0 0 var(--air-m);
+    list-style: none;
+    color: var(--fg-2);
+  }
+  .hero__logo-link {
+    display: inline-flex;
+    align-items: center;
+    color: inherit;
+    transition: color var(--dur-fast) var(--ease);
+  }
+  .hero__logo-link--ibm:hover {
+    color: var(--brand-ibm);
+  }
+  .hero__logo-link--spotify:hover {
+    color: var(--brand-spotify);
+  }
+  .hero__logo-link--vercel:hover {
+    color: var(--fg);
+  }
+  .hero__logo-link--xata:hover {
+    color: var(--brand-xata);
+  }
+  .hero__logo-link :global(svg) {
+    height: 1.75rem;
+    width: auto;
+  }
+  @media (width <= 520px) {
+    .hero__logos {
+      flex-wrap: nowrap;
+      gap: 0.9rem;
+    }
+    .hero__logo-link :global(svg) {
+      height: 1.3rem;
+    }
+    .hero__more {
+      font-size: 0.65rem;
+      white-space: nowrap;
+    }
+  }
+  .hero__more {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .hero__portrait {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-width: 0;
+  }
+  .hero__portrait img {
+    width: 100%;
+    max-width: 32rem;
+    max-height: 44svh;
+    height: auto;
+    object-fit: contain;
+    object-position: bottom center;
+  }
+  @media (width >= 768px) {
+    .hero__eyebrows {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: var(--air-m);
+      color: var(--fg-label);
+    }
+    .hero__inner {
+      padding-bottom: var(--air-l);
+    }
+    .hero__grid {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+      gap: var(--air-l);
+      align-items: end;
+    }
+    .hero__portrait {
+      justify-content: flex-end;
+      margin-bottom: calc(var(--air-l) * -1);
+    }
+    .hero__portrait img {
+      width: auto;
+      max-width: 100%;
+      max-height: 60svh;
+      margin-inline: 0;
+    }
+  }
+
+  /* ---------- 3. book promo ---------- */
+  .book {
+    padding-block: var(--air-chapter);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .book__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: center;
+    margin-bottom: var(--air-nave);
+  }
+  .book__lede {
+    margin-top: var(--air-s);
+    max-width: var(--measure-lede);
+    color: var(--fg-2);
+  }
+  .book__art {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  /* Placeholder cover: fixed "artwork" tones, readable on both themes. */
+  .book-cover {
+    position: relative;
+    width: min(100%, 21rem);
+    aspect-ratio: 5 / 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    overflow: hidden;
+    border-radius: var(--r-1);
+    border: 1px solid #3a3436;
+    background: linear-gradient(150deg, #1c1517 0%, #0a0708 70%);
+    color: #f2efe9;
+    box-shadow: 0 1.5rem 3rem var(--shadow-lift);
+  }
+  .book-cover__band {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1.1rem;
+    width: 4px;
+    background: #ef3340;
+  }
+  .book-cover__kicker {
+    color: #a39b98;
+  }
+  .book-cover__title {
+    font-family: var(--font-display);
+    font-weight: var(--w-black);
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+  }
+  .book-cover__sub {
+    color: #a39b98;
+  }
+  .book__caption {
+    color: var(--fg-3);
+    text-align: center;
+  }
+  .praise__heading {
+    margin-bottom: var(--air-s);
+  }
+  .praise {
+    columns: 3;
+    column-gap: 1.5rem;
+  }
+  .praise-card {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--hairline);
+    border-radius: 1.1rem;
+    background: var(--bg-plate);
+    transition: transform var(--dur) var(--ease),
+      border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  }
+  .praise-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--hairline-lit);
+    box-shadow: 0 1.5rem 3rem var(--shadow-lift);
+  }
+  .praise-card__badge {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.45rem 0.8rem;
+    border: 1px dashed color-mix(in srgb, var(--accent) 60%, transparent);
+    border-radius: var(--r-pill);
+    color: var(--fg-3);
+  }
+  .praise-card__text {
+    font-size: var(--t-small);
+    line-height: 1.6;
+    color: var(--fg-2);
+  }
+  .praise-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--hairline);
+  }
+  .praise-card__avatar {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background: var(--hairline-lit);
+    flex-shrink: 0;
+  }
+  .praise-card__who {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .praise-card__who strong {
+    font-weight: var(--w-mid);
+    font-size: var(--t-small);
+  }
+  .praise-card__who .text-micro {
+    color: var(--fg-3);
+  }
+  @media (width <= 1024px) {
+    .praise {
+      columns: 2;
+    }
+  }
+  @media (width <= 767px) {
+    .book__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (width <= 640px) {
+    .praise {
+      columns: 1;
+    }
+  }
+
+  /* ---------- 4. ask ---------- */
+  .ask {
+    padding-block: var(--air-chapter);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .ask__lede {
+    margin-top: var(--air-s);
+    max-width: var(--measure-lede);
+    color: var(--fg-2);
+  }
+  .ask__widget {
+    margin-top: var(--air-m);
+  }
+
+  /* ---------- 5. promos ---------- */
+  .promos {
+    padding-block: var(--air-chapter);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .promos__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .promo-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: clamp(1.5rem, 3vw, 3rem);
+    border: 1px solid var(--hairline);
+    border-radius: 1.5rem;
+    background: var(--bg-plate);
+    transition: transform var(--dur) var(--ease),
+      border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  }
+  .promo-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--hairline-lit);
+    box-shadow: 0 1.5rem 3rem var(--shadow-lift);
+  }
+  .promo-card__eyebrow {
+    color: var(--fg-3);
+  }
+  .promo-card__title a:hover {
+    color: var(--accent);
+  }
+  .promo-card__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.8rem;
+  }
+  .promo-card__list a {
+    font-size: var(--t-small);
+    line-height: 1.5;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25rem;
+    text-decoration-color: color-mix(in srgb, var(--mark) 55%, transparent);
+    transition: text-decoration-color var(--dur-fast) var(--ease);
+  }
+  .promo-card__list a:hover {
+    text-decoration-color: var(--mark);
+  }
+  .promo-card__more {
+    margin-top: auto;
+    padding-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: var(--t-label);
+    letter-spacing: var(--track-label);
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .promo-card__more [aria-hidden="true"] {
+    display: inline-block;
+    transition: transform var(--dur-fast) var(--ease);
+  }
+  .promo-card__more:hover [aria-hidden="true"] {
+    transform: translateX(0.3rem);
+  }
+  @media (width <= 767px) {
+    .promos__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ---------- 6. contact ---------- */
+  .contact {
+    padding-block: var(--air-cathedral);
+  }
+  .contact__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--air-s);
+    text-align: center;
+  }
+  .contact__lede {
+    max-width: var(--measure-lede);
+    color: var(--fg-2);
+  }
+</style>

@@ -1,0 +1,1228 @@
+{
+ "coverflow": [
+  {
+   "n": 1,
+   "title": "Evals in AI: A Deep Dive",
+   "event": "AI Engineer World's Fair 2026 (Workshop)",
+   "youtube": "NdrSPm6NCdk"
+  },
+  {
+   "n": 2,
+   "title": "The Critical Advantage With AI",
+   "event": "Agent Conf 2026",
+   "youtube": "aNZz40sQg_g"
+  },
+  {
+   "n": 3,
+   "title": "The New UX",
+   "event": "CityJS London 2026",
+   "youtube": "OwkZ-GMKtv8"
+  },
+  {
+   "n": 4,
+   "title": "Accessibility panel",
+   "event": "Future Frontend 2026 (Accessibility Panel)",
+   "youtube": "iSA23DLYPLs"
+  },
+  {
+   "n": 5,
+   "title": "Frontend after AI: The New UX",
+   "event": "Future Frontend 2026",
+   "youtube": "hUQjn32UVFc"
+  },
+  {
+   "n": 6,
+   "title": "Harnesses in AI: A Deep Dive",
+   "event": "AI Engineer Europe 2026",
+   "youtube": "C_GG5g38vLU"
+  },
+  {
+   "n": 7,
+   "title": "AI Yesterday, Today, and Tomorrow: Extending AI Systems with Model Context Protocol",
+   "event": "How to Web 2025",
+   "youtube": "xVkJm3qWEkU"
+  },
+  {
+   "n": 8,
+   "title": "How to Thrive as a Professional with AI",
+   "event": "React fwdays 2025",
+   "youtube": "GqP0Zj-mqfE"
+  },
+  {
+   "n": 9,
+   "title": "ConTejas AI Panel",
+   "event": "React Paris 2026",
+   "youtube": "0kTaR8L-_cs"
+  },
+  {
+   "n": 10,
+   "title": "The Death of the Browser",
+   "event": "InfoQ",
+   "youtube": "b1fgxbKPHco"
+  },
+  {
+   "n": 11,
+   "title": "How to Optimize Your Health with React Native",
+   "event": "React Universe Meetup Berlin 2026",
+   "youtube": "UTBxhcBv7Ns"
+  },
+  {
+   "n": 12,
+   "title": "How to level up your productivity with MAS (Multi Agent Systems)",
+   "event": "WhatTheStack 2025",
+   "youtube": "SFkLjfwVPrQ"
+  },
+  {
+   "n": 13,
+   "title": "Maximize Your Productivity with AI Agents",
+   "event": "React Summit 2025",
+   "youtube": "hi0epYlR-rg"
+  },
+  {
+   "n": 14,
+   "title": "How to Thrive as a Developer",
+   "event": "AI Driven Development Day 2025",
+   "youtube": "eXBs98E_j4s"
+  },
+  {
+   "n": 15,
+   "title": "Creating fluent Frontend Experiences in an age of AI",
+   "event": "Frontend Nation 2025",
+   "youtube": "-JjD6IbRrNM"
+  },
+  {
+   "n": 16,
+   "title": "How Devs Can Maximize Their Productivity with AI Agents in 2025",
+   "event": "Productivity Conf 2025",
+   "youtube": "LCrkIf8g7M4"
+  },
+  {
+   "n": 17,
+   "title": "UI Engineering for the AI Age",
+   "event": "React Day by Frontend Nation 2025",
+   "youtube": "u3cu8EN-SKk"
+  },
+  {
+   "n": 18,
+   "title": "Using AI Effectively in 2025",
+   "event": "BeJS 2025",
+   "youtube": "fKOfUqAOGSE"
+  },
+  {
+   "n": 19,
+   "title": "React Devs, Here's Why You Should Give AI Another Chance",
+   "event": "React Day Berlin 2024",
+   "youtube": "fsAYMNl1Cj0"
+  },
+  {
+   "n": 20,
+   "title": "The Dots Connect: My Entire Story",
+   "event": "THAT Conference 2023",
+   "youtube": "pWm7jGIJg2s"
+  },
+  {
+   "n": 21,
+   "title": "Applying AI today",
+   "event": "React fwdays 2024",
+   "youtube": "-uqDcjUIvxg"
+  },
+  {
+   "n": 22,
+   "title": "SmashingConf New York 2024",
+   "event": "SmashingConf New York 2024",
+   "youtube": "uiZ6dwmVtYU"
+  },
+  {
+   "n": 23,
+   "title": "Why Small Language Models are the future",
+   "event": "AI Eng Talks 2024",
+   "youtube": "uNj3y2pItrA"
+  },
+  {
+   "n": 24,
+   "title": "React Server Components in AI Applications",
+   "event": "React Advanced London 2024",
+   "youtube": "qlEsdo1F004"
+  },
+  {
+   "n": 25,
+   "title": "Event Sourcing for the Rest of Us",
+   "event": "Build Stuff 2024",
+   "youtube": "fcG-XgLkIhM"
+  },
+  {
+   "n": 26,
+   "title": "New Trends in Front End Development and what we can learn from them",
+   "event": "Build Stuff 2023",
+   "youtube": "OSXUF2ydu_w"
+  },
+  {
+   "n": 27,
+   "title": "You Are an AI Engineer",
+   "event": "JNation 2024",
+   "youtube": "QoJ6RtiEICY"
+  },
+  {
+   "n": 28,
+   "title": "Build a RAG App In Under 20 Minutes",
+   "event": "RAG++ London 2024",
+   "youtube": "COIpsrgy1a0"
+  },
+  {
+   "n": 29,
+   "title": "Unlocking Value with AI Today",
+   "event": "React Rally 2024",
+   "youtube": "uMksIqpbVoY"
+  },
+  {
+   "n": 30,
+   "title": "AI-Generated React Server Components",
+   "event": "CascadiaJS 2024",
+   "youtube": "Yj1gWCBqHIA"
+  },
+  {
+   "n": 31,
+   "title": "Generative UI as a Complement to Gen AI",
+   "event": "The GEEK Conf 2024",
+   "youtube": "KfGgup5y3bk"
+  },
+  {
+   "n": 32,
+   "title": "Best AI Tools for Web Developers",
+   "event": "Pixel Pioneers 2024",
+   "youtube": "B_NeczKu20c"
+  },
+  {
+   "n": 33,
+   "title": "Event Sourcing for JS Devs",
+   "event": "CityJS London 2024",
+   "youtube": "Gw1le4OdKCs"
+  },
+  {
+   "n": 34,
+   "title": "You are an AI engineer",
+   "event": "JS Heroes 2024",
+   "youtube": "AlsNzAoCLSA"
+  },
+  {
+   "n": 35,
+   "title": "Getting Fluent with React",
+   "event": "Frontend Nation 2024",
+   "youtube": "GEmLMWixogM"
+  },
+  {
+   "n": 36,
+   "title": "I Wrote a Book on React: Things You Should Know",
+   "event": "React Paris 2024",
+   "youtube": "5MZbkow5U8o"
+  },
+  {
+   "n": 37,
+   "title": "React Server Components",
+   "event": "React Day Berlin 2023",
+   "youtube": "ar21ZA5MWS8"
+  },
+  {
+   "n": 38,
+   "title": "Let’s Make A Framework",
+   "event": "BeJS 2023",
+   "youtube": "_qfbYB6Hdgg"
+  },
+  {
+   "n": 39,
+   "title": "New Trends in Front-End Development (and What We Can Learn from them)",
+   "event": "Infobip Shift 2023",
+   "youtube": "VINfWbaFBVs"
+  },
+  {
+   "n": 40,
+   "title": "React as a Developer Health Tool",
+   "event": "RenderATL 2023",
+   "youtube": "2qBQRglRcIA"
+  },
+  {
+   "n": 41,
+   "title": "React Server Components",
+   "event": "React Bangalore 2023",
+   "youtube": "LuCiywxFc1E"
+  },
+  {
+   "n": 42,
+   "title": "Why everybody needs to use a framework",
+   "event": "ReactNext 2023",
+   "youtube": "zBPh6ZaAWAA"
+  },
+  {
+   "n": 43,
+   "title": "Building a Voice Activated Personal Assistant",
+   "event": "Smashing Meets AI 2023",
+   "youtube": "wnxTXAacOlU"
+  },
+  {
+   "n": 44,
+   "title": "Building a Voice-Enabled AI Assistant With JavaScript",
+   "event": "JSNation 2023",
+   "youtube": "GBO05PZ5O1E"
+  },
+  {
+   "n": 45,
+   "title": "React as a Developer Health Tool",
+   "event": "React Miami 2023",
+   "youtube": "oNQvzML3XHw"
+  },
+  {
+   "n": 46,
+   "title": "Panel Discussion",
+   "event": "AgentConf 2023",
+   "youtube": "ZCTtZhWRRg0"
+  },
+  {
+   "n": 47,
+   "title": "Digging into Virtual Scrolling",
+   "event": "SmashingConf Freiburg 2022",
+   "youtube": "5B0PdMEXZSM"
+  },
+  {
+   "n": 48,
+   "title": "Let's understand suspense for data fetching",
+   "event": "React Brussels",
+   "youtube": "uZnXwuhYZBc"
+  },
+  {
+   "n": 49,
+   "title": "Understanding Concurrent React with Hacks",
+   "event": "React India",
+   "youtube": "KWb7U9p4h2U"
+  },
+  {
+   "n": 50,
+   "title": "Documentation for Humans",
+   "event": "Infobip Shift 2022",
+   "youtube": "IbinkKZZp0k"
+  },
+  {
+   "n": 51,
+   "title": "Enabling data at massive scale with Next.js",
+   "event": "Next.js Conf 2022",
+   "youtube": "3TVkTrZFizo"
+  },
+  {
+   "n": 52,
+   "title": "React Advanced London",
+   "event": "React Advanced London",
+   "youtube": "GzombuX2tS0"
+  },
+  {
+   "n": 53,
+   "title": "Doing Data as a Frontend Developer",
+   "event": "CascadiaJS",
+   "youtube": "f2_aj1y3zO8"
+  },
+  {
+   "n": 54,
+   "title": "Handling Data at Scale for React Developers",
+   "event": "React Summit",
+   "youtube": "7Urm4xbw4RA"
+  },
+  {
+   "n": 55,
+   "title": "Building Human-Centered Documentation with React",
+   "event": "React Norway",
+   "youtube": "AQRlDs92XFA"
+  },
+  {
+   "n": 56,
+   "title": "The next evolution of data infrastructure for JavaScript developers",
+   "event": "BeJS",
+   "youtube": "liwC7W-uWnY"
+  },
+  {
+   "n": 57,
+   "title": "WorkerConf",
+   "event": "WorkerConf",
+   "youtube": "L4n3JDw5m_g"
+  },
+  {
+   "n": 58,
+   "title": "Building a massively scalable and performant Jamstack app in minutes",
+   "event": "React Miami",
+   "youtube": "7meVjMOgw8A"
+  },
+  {
+   "n": 59,
+   "title": "Changing The Game with Developer Experience",
+   "event": "ConFrontJS 2022",
+   "youtube": "AqpFgD2RHKI"
+  },
+  {
+   "n": 60,
+   "title": "JavaScript data infrastructure",
+   "event": "LogRocket Podcast",
+   "youtube": "9S0hCRhodN8"
+  },
+  {
+   "n": 61,
+   "title": "Serverless in the Park",
+   "event": "Serverless in the Park",
+   "youtube": "0qK2_wi4t3k"
+  },
+  {
+   "n": 62,
+   "title": "OSCAFest22",
+   "event": "OSCAFest22",
+   "youtube": "7jYvy4SFG1w"
+  },
+  {
+   "n": 63,
+   "title": "Explosive Velocity with a Modern Stack",
+   "event": "GOTO 2021",
+   "youtube": "KTkyQ3z7M8w"
+  },
+  {
+   "n": 64,
+   "title": "Infrastructure as Code with a Node Focus",
+   "event": "NodeCongress",
+   "youtube": "_CTTRcEARTA"
+  },
+  {
+   "n": 65,
+   "title": "Powerful REST in a GraphQL world",
+   "event": "ReactConf AU",
+   "youtube": "9xL0a6YJIQU"
+  },
+  {
+   "n": 66,
+   "title": "Deconstructing React",
+   "event": "React Berlin Meetup 2020",
+   "youtube": "eTcyOCd6v1c"
+  },
+  {
+   "n": 67,
+   "title": "Let's build with WebAssembly!",
+   "event": "JSConf Armenia",
+   "youtube": "ejEVdbyEVnc"
+  },
+  {
+   "n": 68,
+   "title": "Strong RESTful Contracts in a GraphQL world",
+   "event": "React Day Berlin",
+   "youtube": "CWO6U7jaO20"
+  },
+  {
+   "n": 69,
+   "title": "Gratitude, Healthcare, and Coding Communities",
+   "event": "JSConf EU (Lightning Talk)",
+   "youtube": "ipyy-FdHY-0"
+  },
+  {
+   "n": 70,
+   "title": "CSS on Today's Web Platform",
+   "event": "View-source conf",
+   "youtube": "L-qALpMzcz8"
+  },
+  {
+   "n": 71,
+   "title": "React and TypeScript for Fun and Profit",
+   "event": "TypeScript Berlin Meetup",
+   "youtube": "LUHecE-kO9s"
+  },
+  {
+   "n": 72,
+   "title": "React Native and PWA: A Tale of Two Architectures",
+   "event": "WebCamp Zagreb",
+   "youtube": "XBh8ywUU0mw"
+  },
+  {
+   "n": 73,
+   "title": "Using Hooks and Codegen",
+   "event": "ReactConf 2019",
+   "youtube": "cdsnzfJUqm0"
+  },
+  {
+   "n": 74,
+   "title": "Legendary Lambdas",
+   "event": "JSConf Budapest",
+   "youtube": "RluWQ8Lfyg8"
+  },
+  {
+   "n": 75,
+   "title": "Let's build with WebAssembly!",
+   "event": "JSCamp Romania",
+   "youtube": "AY-jBg-8Ofw"
+  },
+  {
+   "n": 76,
+   "title": "A Tale of Two Architectures",
+   "event": "DinosaurJS",
+   "youtube": "9jNu1k4Bwa8"
+  },
+  {
+   "n": 77,
+   "title": "Scalable Design Systems with TypeScript",
+   "event": "ReactFinland",
+   "youtube": "ZsBW4S8hYMU"
+  },
+  {
+   "n": 78,
+   "title": "A Quick Recap on WebAssembly",
+   "event": "dotJS (Lightning Talk)",
+   "youtube": "IPEzwWt4adY"
+  },
+  {
+   "n": 79,
+   "title": "Scalable Best Practices for Your Dev Team",
+   "event": "JSConf Armenia",
+   "youtube": "bs4vsji1GZ0"
+  },
+  {
+   "n": 80,
+   "title": "Scalable Best Practices for Your Development Team",
+   "event": "ConFrontJS",
+   "youtube": "rdiUFma8QJU"
+  },
+  {
+   "n": 81,
+   "title": "Streaming React for Faster UIs",
+   "event": "React Boston",
+   "youtube": "lKG3nYpPgtM"
+  },
+  {
+   "n": 82,
+   "title": "React Suspense Deep Dive",
+   "event": "React Berlin Meetup",
+   "youtube": "JHtKhLPBqxw"
+  },
+  {
+   "n": 83,
+   "title": "From You Can't to You Can: The Welcoming Nature of JavaScript",
+   "event": "UtahJS Conf",
+   "youtube": "71pKrWWOE0k"
+  },
+  {
+   "n": 84,
+   "title": "From You Can't to You Can: The Welcoming Nature of JavaScript",
+   "event": "JSConf EU",
+   "youtube": "ONlLvZWXv1Y"
+  },
+  {
+   "n": 85,
+   "title": "Papercuts Can Kill",
+   "event": "TEDxYouth@Doha",
+   "youtube": "TUIcTl9Hto4"
+  }
+ ],
+ "transcripts": [
+  {
+   "title": "Evals in AI: A Deep Dive",
+   "slug": "ai-engineer-world-s-fair-2026-workshop",
+   "event": "AI Engineer World's Fair 2026 (Workshop), 2026"
+  },
+  {
+   "title": "The Critical Advantage With AI",
+   "slug": "agent-conf-2026",
+   "event": "Agent Conf 2026, 2026"
+  },
+  {
+   "title": "The New UX",
+   "slug": "cityjs-london-2026",
+   "event": "CityJS London 2026, 2026"
+  },
+  {
+   "title": "Frontend after AI: The New UX",
+   "slug": "future-frontend-2026",
+   "event": "Future Frontend 2026, 2026"
+  },
+  {
+   "title": "Accessibility panel",
+   "slug": "future-frontend-2026-accessibility-panel",
+   "event": "Future Frontend 2026 (Accessibility Panel), 2026"
+  },
+  {
+   "title": "Harnesses in AI: A Deep Dive",
+   "slug": "ai-engineer-europe-2026",
+   "event": "AI Engineer Europe 2026, 2026"
+  },
+  {
+   "title": "AI Yesterday, Today, and Tomorrow: Extending AI Systems with Model Context Protocol",
+   "slug": "how-to-web-2025",
+   "event": "How to Web 2025, 2026"
+  },
+  {
+   "title": "How to Thrive as a Professional with AI",
+   "slug": "react-fwdays-2025",
+   "event": "React fwdays 2025, 2026"
+  },
+  {
+   "title": "The Death of the Browser",
+   "slug": "infoq",
+   "event": "InfoQ, 2026"
+  },
+  {
+   "title": "How to Optimize Your Health with React Native",
+   "slug": "react-universe-meetup-berlin-2026",
+   "event": "React Universe Meetup Berlin 2026, 2026"
+  },
+  {
+   "title": "How to level up your productivity with MAS (Multi Agent Systems)",
+   "slug": "whatthestack-2025",
+   "event": "WhatTheStack 2025, 2025"
+  },
+  {
+   "title": "Maximize Your Productivity with AI Agents",
+   "slug": "react-summit-2025",
+   "event": "React Summit 2025, 2025"
+  },
+  {
+   "title": "How to Thrive as a Developer",
+   "slug": "ai-driven-development-day-2025",
+   "event": "AI Driven Development Day 2025, 2025"
+  },
+  {
+   "title": "Creating fluent Frontend Experiences in an age of AI",
+   "slug": "frontend-nation-2025",
+   "event": "Frontend Nation 2025, 2025"
+  },
+  {
+   "title": "How Devs Can Maximize Their Productivity with AI Agents in 2025",
+   "slug": "productivity-conf-2025",
+   "event": "Productivity Conf 2025, 2025"
+  },
+  {
+   "title": "UI Engineering for the AI Age",
+   "slug": "react-day-by-frontend-nation-2025",
+   "event": "React Day by Frontend Nation 2025, 2025"
+  },
+  {
+   "title": "Using AI Effectively in 2025",
+   "slug": "bejs-2025",
+   "event": "BeJS 2025, 2025"
+  },
+  {
+   "title": "Build a RAG App In Under 20 Minutes",
+   "slug": "rag-london-2024",
+   "event": "RAG++ London 2024, 2024"
+  },
+  {
+   "title": "Generative UI as a Complement to Gen AI",
+   "slug": "the-geek-conf-2024",
+   "event": "The GEEK Conf 2024, 2024"
+  },
+  {
+   "title": "Digging into Virtual Scrolling",
+   "slug": "smashingconf-freiburg-2022",
+   "event": "SmashingConf Freiburg 2022, 2022"
+  },
+  {
+   "title": "Enabling data at massive scale with Next.js",
+   "slug": "next-js-conf-2022",
+   "event": "Next.js Conf 2022, 2022"
+  },
+  {
+   "title": "Changing The Game with Developer Experience",
+   "slug": "confrontjs-2022",
+   "event": "ConFrontJS 2022, 2022"
+  },
+  {
+   "title": "JavaScript data infrastructure",
+   "slug": "logrocket-podcast",
+   "event": "LogRocket Podcast, 2022"
+  },
+  {
+   "title": "Powerful REST in a GraphQL world",
+   "slug": "reactconf-au",
+   "event": "ReactConf AU, 2020"
+  },
+  {
+   "title": "From You Can't to You Can: The Welcoming Nature of JavaScript",
+   "slug": "jsconf-eu",
+   "event": "JSConf EU, 2018"
+  },
+  {
+   "title": "SmashingConf New York 2024",
+   "slug": "smashingconf-new-york-2024",
+   "event": "SmashingConf New York 2024"
+  }
+ ],
+ "episodes": [
+  {
+   "slug": "how-to-build-tech-software-full-stack-engineering",
+   "title": "How to Build an Effective Tech Stack: Balancing User and Developer Experience"
+  },
+  {
+   "slug": "paul-aragones-how-to-engineer-a-great-marriage",
+   "title": "Paul Aragones: How to Engineer a Great Marriage"
+  },
+  {
+   "slug": "what-is-ai-engineering-and-what-do-ai-engineers-even-do",
+   "title": "What is AI engineering and what do AI engineers even do?"
+  },
+  {
+   "slug": "mikhail-korolev-how-to-hack-the-job-market-get-into-vip-room",
+   "title": "Mikhail Korolev: How to Hack the Job Market & Get Into VIP Rooms"
+  },
+  {
+   "slug": "how-to-communicate-well-interpersonally-in-teams-on-stage",
+   "title": "How to communicate well: interpersonally, in teams, and on stage"
+  },
+  {
+   "slug": "diazno-how-to-unlock-creativity-taste-and-leadership",
+   "title": "Diazno: How to Unlock Creativity, Taste, and Effective Leadership"
+  },
+  {
+   "slug": "isaac-akinsete-optimize-health-desk-worker-longevity",
+   "title": "Isaac Akinsete: How to Optimize Health & Longevity as a Desk Worker"
+  },
+  {
+   "slug": "faris-aziz-how-to-get-promoted-build-resilience-empathy",
+   "title": "Faris Aziz: How to Get Promoted, Build Resilience, and Lead with Empathy"
+  },
+  {
+   "slug": "passkeys-webauthn",
+   "title": "Passkeys: A Deep Dive into Authentication"
+  },
+  {
+   "slug": "how-to-engineer-your-way-to-quality-health",
+   "title": "How to Engineer Your Way to Quality Health"
+  },
+  {
+   "slug": "pratim-bhosale-how-to-get-into-ai-from-backend-engineering",
+   "title": "Pratim Bhosale: How to get into AI from Backend Engineering"
+  },
+  {
+   "slug": "shivay-lamba-how-to-run-secure-ai-anywhere-with-webassembly",
+   "title": "Shivay Lamba: How to run secure AI anywhere with WebAssembly"
+  },
+  {
+   "slug": "devrel-deep-dive-what-it-is-how-to-do-it-how-to-measure-it",
+   "title": "DevRel deep dive: what it is, how to do it, how to measure it"
+  },
+  {
+   "slug": "dev-agrawal-how-to-be-notable-event-sourcing-and-solidjs",
+   "title": "Dev Agrawal: How to be notable, event sourcing, and SolidJS"
+  },
+  {
+   "slug": "lu-wilson-tldraw-how-build-an-ai-native-whiteboard",
+   "title": "Lu Wilson: How to Build an AI-Native Whiteboard for Everyone"
+  },
+  {
+   "slug": "sean-roberts-ax-agent-experience-netlify",
+   "title": "Sean Roberts: How to create better UX with AI Agent Experience (AX)"
+  },
+  {
+   "slug": "santosh-yadav-how-to-level-up-your-career-health-and-life",
+   "title": "Santosh Yadav: How to level up your career, health, and life"
+  },
+  {
+   "slug": "sacha-greif-how-to-understand-developers-through-surveys",
+   "title": "Sacha Greif: How to Understand Developers through Surveys"
+  },
+  {
+   "slug": "alexander-lichter-voidzero-vite-rolldown-oxc",
+   "title": "Alexander Lichter: The State of Modern Web Tooling"
+  },
+  {
+   "slug": "kent-c-dodds-mcp-ux-epicai",
+   "title": "Kent C. Dodds: Model Context Protocol (MCP) and how it changes UX"
+  },
+  {
+   "slug": "kendo-ui-design-systems-component-library-progress-telerik",
+   "title": "Kendo UI Team: How to build quality design systems, Kendo UI, collaboration"
+  },
+  {
+   "slug": "event-sourcing-architecture-domain-driven-design-deep-dive",
+   "title": "Event Sourced Architecture: A Deep Dive"
+  },
+  {
+   "slug": "ai-rag-agents-2025-mcp-model-context-protocol",
+   "title": "Get up to date with AI in 2025: Agents, Model Context Protocol (MCP), Hybrid Search, RAG, and more..."
+  },
+  {
+   "slug": "shuhao-zhang-tiny-fish-agentql-ai-agents",
+   "title": "Shuhao Zhang, founder Tiny Fish: How to Turn Any Website into an API for AI Agents"
+  },
+  {
+   "slug": "liran-tal-snyk-how-to-secure-your-apps-and-ai-agents",
+   "title": "Liran Tal: How to Secure Your Apps and AI Agents"
+  },
+  {
+   "slug": "jack-herrington-model-context-protocol-mcp-growing-a-youtube",
+   "title": "Jack Herrington: Model Context Protocol (MCP), Growing a YouTube Audience, Getting into Open Source"
+  },
+  {
+   "slug": "chinar-movsisyan-how-to-deliver-end-to-end-ai-solutions",
+   "title": "Chinar Movsisyan: How to Deliver End-to-End AI Solutions"
+  },
+  {
+   "slug": "daniel-lockyer-how-to-deploy-and-scale-anything",
+   "title": "Daniel Lockyer: How to deploy and scale anything"
+  },
+  {
+   "slug": "eddy-vinck-how-to-solve-your-own-problems-with-ai",
+   "title": "Eddy Vinck: How to Solve Your Own Problems with AI"
+  },
+  {
+   "slug": "dan-bochman-ai-image-generation-fashn-computer-vision",
+   "title": "Dan Bochman: How to Create AI Image Generation Models"
+  },
+  {
+   "slug": "marisa-morby-how-to-design-products-with-nature-in-mind",
+   "title": "Marisa Morby: How to Design Products with Nature in Mind"
+  },
+  {
+   "slug": "corbin-crutchley-ui-framework-mental-health",
+   "title": "Corbin Crutchley: How UI frameworks work in detail, thriving with mental health"
+  },
+  {
+   "slug": "taylor-desseyn-how-to-build-a-genuine-high-quality-network",
+   "title": "Taylor Desseyn: How to Build a Genuine, High-Quality Network"
+  },
+  {
+   "slug": "chris-ferdinandi-how-to-thrive-as-a-developer-with-adhd",
+   "title": "Chris Ferdinandi: How to Thrive as a Developer with ADHD"
+  },
+  {
+   "slug": "donny-wals-how-to-build-effective-ios-applications-from-a-we",
+   "title": "Donny Wals: How to Build Effective iOS Applications from a Web Perspective"
+  },
+  {
+   "slug": "richard-roger-nearform-voxgig-devrel",
+   "title": "Richard Rodger: How to Build and Scale World-Class Consultancies (and DevRel)"
+  },
+  {
+   "slug": "ivan-burazin-co-founder-daytona-developer-environments",
+   "title": "Ivan Burazin, co-founder Daytona: How to Accelerate Developer Onboarding by 56%"
+  },
+  {
+   "slug": "julia-flament-wallin-how-to-build-maps-of-the-world-with-ai",
+   "title": "Julia Flament-Wallin: How to Build Maps of the World with AI"
+  },
+  {
+   "slug": "max-stoiber-stellate-graphql-spectrum",
+   "title": "Max Stoiber: How to build startups that get acquired (and cache GraphQL well)"
+  },
+  {
+   "slug": "alexander-lichter-how-to-get-the-most-out-of-vuejs-and-nuxt",
+   "title": "Alexander Lichter: How to Get the Most out of Vue.js and Nuxt"
+  },
+  {
+   "slug": "aymen-bejs-react-brussels-paris-africa-conference-organize",
+   "title": "Aymen Ben Amor: How to Organize Developer Conferences"
+  },
+  {
+   "slug": "matt-pocock-total-typescript",
+   "title": "Matt Pocock: How to Maximize Success with TypeScript and Career"
+  },
+  {
+   "slug": "tc39-signals",
+   "title": "TC39: How signals work, adding signals to the JavaScript programming language"
+  },
+  {
+   "slug": "paul-klein-iv-browserbase",
+   "title": "Paul Klein IV: How to Build Browsers for AI Agents"
+  },
+  {
+   "slug": "kelly-vaughn-spot-ai-engineering-director-career",
+   "title": "Kelly Vaughn: How to Navigate Career Transitions and Build Meaningful Relationships"
+  },
+  {
+   "slug": "aya-bochman-fashn-ai-founder",
+   "title": "Aya Bochman, co-founder Fashn.ai: How to build a lean AI startup (that makes money)"
+  },
+  {
+   "slug": "peer-richelsen-founder-calcom-how-to-build-an-open-startup",
+   "title": "Peer Richelsen, founder Cal.com: How to build an open startup"
+  },
+  {
+   "slug": "harper-carroll-ai-machine-learning-agi-nuclear",
+   "title": "Harper Carroll: How Machine Learning Works, What AI Engineering is, the Future of AI"
+  },
+  {
+   "slug": "chatgpt-how-to-train-an-llm-ethics-and-the-future-of-ai",
+   "title": "ChatGPT: How to Train an LLM, Ethics, and the future of AI"
+  },
+  {
+   "slug": "tracy-lee-ceo-this-dot-how-to-be-successful-in-devrel-with-a",
+   "title": "Tracy Lee, CEO This Dot: How to be successful in DevRel with AI"
+  },
+  {
+   "slug": "alex-moldovan-founder-js-heroes-how-organize-js-conference",
+   "title": "Alex Moldovan, founder JS Heroes: How to Organize a Community-first JavaScript Conference"
+  },
+  {
+   "slug": "michelle-bakels-how-to-optimize-developer-health",
+   "title": "Michelle Bakels: How to Optimize Developer Health"
+  },
+  {
+   "slug": "gabe-greenberg-ceo-g2i-how-to-bootstrap-a-healthy-tech-busin",
+   "title": "Gabe Greenberg, CEO G2i: How to Bootstrap a Healthy Tech Business"
+  },
+  {
+   "slug": "josh-goldberg-how-to-maximize-success-with-typescript-and-es",
+   "title": "Josh Goldberg: How to Maximize Success with TypeScript and ESLint"
+  },
+  {
+   "slug": "kyle-corbitt-ceo-openpipe-how-to-fine-tune-your-own-language",
+   "title": "Kyle Corbitt, CEO OpenPipe: How to Fine-Tune Your Own Language Model (LLM)"
+  },
+  {
+   "slug": "shruti-balasa-how-to-maximize-success-with-tailwind-css",
+   "title": "Shruti Balasa: How to Maximize Success with Tailwind CSS"
+  },
+  {
+   "slug": "jeff-cross-ceo-nx-how-to-build-and-scale-developer-tools",
+   "title": "Jeff Cross, CEO Nx: How to Build and Scale Developer Tools"
+  },
+  {
+   "slug": "jatin-ramanathan-how-google-is-rendered-with-wiz",
+   "title": "Jatin Ramanathan: How Google.com is Rendered with Wiz (Fastest UI Framework)"
+  },
+  {
+   "slug": "kilian-valkhof-polypane-electron",
+   "title": "Kilian Valkhof, founder Polypane: How to Build and Sell a Developer-first Browser"
+  },
+  {
+   "slug": "chad-whitacre-how-to-fix-open-source-sustainability",
+   "title": "Chad Whitacre: How to Fix Open Source Sustainability"
+  },
+  {
+   "slug": "david-cramer-zeeg-sentry-open-source",
+   "title": "David Cramer, Founder Sentry: How my Open Source Side Project became a Successful Business"
+  },
+  {
+   "slug": "santosh-yadav-angular-nx-open-source-github-star-slum",
+   "title": "Santosh Yadav: How Open Source Changes Lives, Angular Deep Dive"
+  },
+  {
+   "slug": "jay-v-ceo-sstdev-how-to-rapidly-go-from-idea-to-ipo-with-inf",
+   "title": "Jay V, CEO SST.dev: How to rapidly go from Idea to IPO with Infrastructure-as-Code "
+  },
+  {
+   "slug": "rizel-scarlett-tbd-github-copilot-devrel-web",
+   "title": "Rizèl Scarlett: How to Own Your Digital Identity, DevRel and Skepticism, GitHub Copilot"
+  },
+  {
+   "slug": "glauber-costa-turso-glcst-sqlite-scale",
+   "title": "Glauber Costa, CEO Turso: How to Build Horizontally Scaled SQLite"
+  },
+  {
+   "slug": "john-mcbride-ai-infrastructure-kubernetes",
+   "title": "John McBride: How to Build Your Own AI Infrastucture with Kubernetes"
+  },
+  {
+   "slug": "brian-douglas-bdougie-opensauced-github",
+   "title": "Brian Douglas, CEO OpenSauced: How to Make Open Source Measurable, GitHub, Founder-Led Growth"
+  },
+  {
+   "slug": "erik-rasmussen-react-final-form-redux-form-solidjs",
+   "title": "Erik Rasmussen: How to Build a Career on Open Source, Solid.js, Form Libraries"
+  },
+  {
+   "slug": "monica-sarbu-xata-postgres-serverless-diversity",
+   "title": "Monica Sarbu, CEO Xata: Building a Postgres Platform, an All-Female Board, and ~50% Gender Diversity"
+  },
+  {
+   "slug": "rachel-nabors-how-to-navigate-big-tech-the-future-of-devrel-",
+   "title": "Rachel Nabors: How to Navigate Big Tech, the Future of DevRel, Documentation"
+  },
+  {
+   "slug": "brandon-bayer-flightcontrol-aws-velocity-blitzjs",
+   "title": "Brandon Bayer, CEO Flightcontrol: How to unlock peak velocity on AWS"
+  },
+  {
+   "slug": "anjana-vakil-recurse-center-outreachy-success-tech-2",
+   "title": "Anjana Vakil: How to Get into Tech and be Successful"
+  },
+  {
+   "slug": "clark-sell-founder-that-conference",
+   "title": "Clark Sell, Founder THAT Conference: How to Organize a Large Multidisciplinary Tech Conference"
+  },
+  {
+   "slug": "steven-fabre-liveblocks-collaboration-design-engineering",
+   "title": "Steven Fabre, CEO Liveblocks: How We're Building Realtime Collaboration, Design Engineering"
+  },
+  {
+   "slug": "david-khourshid-ceo-stately-xstate-state-machine-chart",
+   "title": "David Khourshid, CEO Stately.ai: How State Machines Create Robust Software"
+  },
+  {
+   "slug": "mark-erikson-how-replayio-is-built-maintaining-redux",
+   "title": "Mark Erikson: How Replay.io is Built, Maintaining Redux"
+  },
+  {
+   "slug": "zack-chapple-zephyr-cloud-module-federation-micro-frontend",
+   "title": "Zack Chapple, CEO Zephyr Cloud: How Module Federation Works, Micro-Frontend Architecture"
+  },
+  {
+   "slug": "svenja-schaefer-regex-regular-expressions-testing-software",
+   "title": "Svenja Schäfer: Mastering Regular Expressions and Automated Testing"
+  },
+  {
+   "slug": "chris-coyier-codepen-css-tricks",
+   "title": "Chris Coyier, CEO CodePen: How We're Building CodePen 2.0, CSS-Tricks"
+  },
+  {
+   "slug": "dan-shappir-web-performance",
+   "title": "Dan Shappir: How to Maximize Web Performance"
+  },
+  {
+   "slug": "sanket-sahu-geekyants-react-native-nativebase-gluestack",
+   "title": "Sanket Sahu, CEO GeekyAnts: How to Build and Scale a Company to 400+ with Open Source"
+  },
+  {
+   "slug": "shruti-kapoor-slack-patents",
+   "title": "Shruti Kapoor: How Slack is Built and Tested, How Patents are Filed"
+  },
+  {
+   "slug": "bobak-tavangar-brilliant-labs-frame-noa-glasses-open-source",
+   "title": "Bobak Tavangar, CEO Brilliant Labs: How to build open-source AI-enabled smart glasses with AR"
+  },
+  {
+   "slug": "daniel-afonso-how-to-speak-at-tech-conferences-olx-gitnation",
+   "title": "Daniel Afonso: How to Speak at Tech Conferences, Passion, Pain, Evangelism"
+  },
+  {
+   "slug": "guillermo-rauch-rauchg-vercel-open-source-nextjs-edge-ppr",
+   "title": "Guillermo Rauch, CEO Vercel: Open Source, Next.js, Edge Computing, Partial Pre-rendering"
+  },
+  {
+   "slug": "jeff-escalante-engineering-management-handbook-clerk",
+   "title": "Jeff Escalante: How to Build and Run Effective Engineering Teams"
+  },
+  {
+   "slug": "matt-biilmann-ceo-netlify-how-we-built-netlify-jamstack-ddos",
+   "title": "Matt Biilmann, CEO Netlify: How we built Netlify, Jamstack, DDoS Protection, and Future Direction"
+  },
+  {
+   "slug": "artem-zakharchenko-testing-mock-serviceworker-open-source",
+   "title": "Artem Zakharchenko: How to Write Epic Automated Tests, Mock ServiceWorker, Open Source"
+  },
+  {
+   "slug": "francesco-ciulla-how-to-reach-100k-people-with-code",
+   "title": "Francesco Ciulla: How to Reach 100k+ People with Code and Content"
+  },
+  {
+   "slug": "ujjwal-sharma-how-javascript-is-made-building-the-web-tc39",
+   "title": "Ujjwal Sharma: How JavaScript is Made, Building the Web, Bias, Inclusion, and Equality"
+  },
+  {
+   "slug": "yoav-ganbar-builder-io-qwik",
+   "title": "Yoav Ganbar: How to Create the Fastest Web Experiences with Qwik"
+  },
+  {
+   "slug": "lazar-nikolov-sentry-web-performance-monitoring",
+   "title": "Lazar Nikolov: How to Maximize Application Monitoring and Performance"
+  },
+  {
+   "slug": "kyle-simpson-how-to-write-a-javascript-book-ydkjs-o-reilly",
+   "title": "Kyle Simpson: How to Write a JavaScript Book, Degrees and Gatekeeping in Tech, New Startup Vella.ai"
+  },
+  {
+   "slug": "solidjs-ecosystem-atila-fassina-tauri-rust",
+   "title": "Atila Fassina: Build your ecosystem, SolidJS, Tauri, Rust, and Developer Experience"
+  },
+  {
+   "slug": "how-computers-work-full-stack-cs50",
+   "title": "How do computers actually work? From electrons to the web."
+  },
+  {
+   "slug": "kent-c-dodds-epic-web-react-remix-rsc",
+   "title": "Kent C. Dodds: Create Epic Web Experiences with Remix"
+  },
+  {
+   "slug": "catch-up-on-todays-web-ai-engineer-css-javascript-html-htmx",
+   "title": "Catch Up on Today's Web: AI, CSS, JavaScript and HTML"
+  },
+  {
+   "slug": "welcome-to-contejas-code-podcast",
+   "title": "Welcome to ConTejas Code"
+  }
+ ],
+ "blog": [
+  {
+   "slug": "2020-in-review",
+   "title": "2020 in Review: Still Thankful",
+   "date": "Fri, 01 Jan 2021 17:15:40 GMT",
+   "description": "A month-by-month look back at my 2020: the friends, family, and small moments that made a pandemic year worth being thankful for."
+  },
+  {
+   "slug": "5-things-i-love-about-my-website",
+   "title": "5 things I love about my website (and how they're built)",
+   "date": "Mon, 20 Jan 2020 18:05:54 GMT",
+   "description": "I walk through five things I love about my website, including automatic dark mode, Next.js server rendering, whimsy, and GitHub as my backend."
+  },
+  {
+   "slug": "ai-evals-llm-judge",
+   "title": "AI Evals: How to Build an LLM Judge That Agrees With You",
+   "date": "Tue, 06 Oct 2026 07:22:23 GMT",
+   "description": "AI evals are fuzzy unit tests. My AI Engineer World's Fair workshop, written up: build an LLM judge, catch its biases and gate deploys on it."
+  },
+  {
+   "slug": "aleph-alpha-kolibri",
+   "title": "Aleph Alpha Kolibri: How the Sovereign German LLM Works",
+   "date": "Sat, 03 Oct 2026 08:47:15 GMT",
+   "description": "Kolibri is Aleph Alpha's open-weight German and English LLM: 78B parameters, 3.5B per token. How it works, what it's good and bad at, and when to use it."
+  },
+  {
+   "slug": "apple-watch-readiness-score-wrong",
+   "title": "The Apple Watch Readiness Score Is Wrong so I Built My Own",
+   "date": "Thu, 08 Oct 2026 11:00:00 GMT",
+   "description": "My Apple Watch told me to Go For It on my most run-down mornings. Why the Readiness score misses and the readiness app I built in 5 days."
+  },
+  {
+   "slug": "biggest-lessons-2024-honor-people-fear-failure",
+   "title": "Biggest Lessons of 2024: Honor, Trauma, and People",
+   "date": "Sat, 28 Dec 2024 18:36:52 GMT",
+   "description": "Dissecting honor, what it takes to overcome trauma, how to heal from the fear of failure and prioritize relationships."
+  },
+  {
+   "slug": "can-ai-feel-pain",
+   "title": "Can AI Feel Pain? Why Anthropic Banned Cruelty to Claude",
+   "date": "Fri, 09 Oct 2026 10:09:44 GMT",
+   "description": "Nobody can prove AI feels pain, but 25 open models have a pain direction that rises when you insult them. What it shows and why they're still machines."
+  },
+  {
+   "slug": "coding-nights-weekends-good-work-life-balance",
+   "title": "It's Okay to Code on Nights and Weekends",
+   "date": "Sun, 22 Dec 2024 19:27:38 GMT",
+   "description": "I love coding on nights and weekends because it's my favorite hobby. It only becomes a problem when it turns into a god or an expectation."
+  },
+  {
+   "slug": "companies-are-full-of-it",
+   "title": "Bar Raiser Interviews, OKRs, the Spotify Model and Agile: Companies Are Full of It",
+   "date": "Tue, 13 Oct 2026 13:00:00 GMT",
+   "description": "My case against bar raiser interviews, Objectives and Key Results (OKRs), the Spotify model and agile, why AI makes it urgent and how I'd hire instead."
+  },
+  {
+   "slug": "goodbye-facebook",
+   "title": "Goodbye Facebook",
+   "date": "Mon, 11 Jan 2021 14:09:01 GMT",
+   "description": "Why I'm deleting Facebook, Instagram, and WhatsApp: FOMO, lost time, and engagement algorithms that radicalize people. I'm moving to Signal instead."
+  },
+  {
+   "slug": "health-fitness-devrel-hemophilia",
+   "title": "Health, Fitness, DevRel, and Hemophilia",
+   "date": "Sat, 03 Sep 2022 00:00:00 GMT",
+   "description": "A deeply personal post about my health journey and how it's affected my fitness, devrel work, and more."
+  },
+  {
+   "slug": "hello-world",
+   "title": "Hello World",
+   "date": "Mon, 13 Jan 2020 13:36:14 GMT",
+   "description": "My first post here: a quick hello world I published to make sure the blog works. The real writing starts after this one."
+  },
+  {
+   "slug": "how-long-should-a-keynote-speaker-speak",
+   "title": "How Long Should a Keynote Speaker Speak?",
+   "date": "Mon, 14 Sep 2026 18:30:00 GMT",
+   "description": "A keynote runs 20 to 45 minutes, most often 30. What the attention research really says, what conferences schedule, and how to use the slot you get."
+  },
+  {
+   "slug": "how-much-does-a-keynote-speaker-cost",
+   "title": "How Much Does a Keynote Speaker Cost?",
+   "date": "Thu, 01 Oct 2026 14:40:59 GMT",
+   "description": "A keynote speaker costs $2,500 at the median in 2026 and $10,000 to $25,000 for an established author, plus travel. The benchmarks and what moves them."
+  },
+  {
+   "slug": "how-to-grow-professional-relationships-tjs-model",
+   "title": "How to Grow Professional Relationships",
+   "date": "Thu, 28 Nov 2024 00:00:00 GMT",
+   "description": "My TJS model maps professional relationships across seven states, from zero-sum competition to toxic enmeshment, and why collaboration is the peak."
+  },
+  {
+   "slug": "impact-pillars-web-engineering",
+   "title": "Pillars of Impact for Web Engineers",
+   "date": "Thu, 10 Mar 2022 20:37:25 GMT",
+   "description": "I break down the four pillars of impact for web engineers: emotional, social, creative, and technical, and how to grow each one over time."
+  },
+  {
+   "slug": "kolibri-vs-claude-german-llm-benchmark",
+   "title": "Kolibri vs Claude Sonnet 5.5: A German LLM Benchmark",
+   "date": "Mon, 05 Oct 2026 12:00:00 GMT",
+   "description": "Aleph Alpha's Kolibri lost all 136 blind comparisons to Claude Sonnet 5.5 at German Bible deep dives, despite clean grammar and a leaner tokenizer."
+  },
+  {
+   "slug": "local-llm-vs-cloud",
+   "title": "Local LLM vs Cloud: Is an $18,000 AI Server Worth It?",
+   "date": "Wed, 14 Oct 2026 13:37:23 GMT",
+   "description": "I've run models on my phone, my laptop and rented GPUs. An $18,000 AI server wins on privacy and loses on price unless it's busy all day."
+  },
+  {
+   "slug": "note-app-ai-benchmark-apple-intelligence-sucks",
+   "title": "Frontier Models Suck Sometimes (A Benchmark)",
+   "date": "Wed, 08 Jul 2026 06:56:00 GMT",
+   "description": "Apple Intelligence refused my voice note, so I benchmarked 11 AI models on it. A cheap one beat the frontier and my phone's Qwen made things up."
+  },
+  {
+   "slug": "please-stop-the-slop",
+   "title": "Please Stop the Slop: What AI Slop Is and How to Spot It",
+   "date": "Sat, 10 Oct 2026 13:00:00 GMT",
+   "description": "My verdict on AI slop: what it is, how to spot it, why not all AI is slop and a petition to keep the internet human."
+  },
+  {
+   "slug": "super-intelligence-isnt-superior",
+   "title": "AI Is Now SI: Super Intelligence Isn't Superior",
+   "date": "Sun, 04 Oct 2026 13:55:00 GMT",
+   "description": "US agencies now call AI Super Intelligence (SI), yet its definition didn't change. What it beats people at, where it fails, and why people make idols."
+  },
+  {
+   "slug": "what-are-open-weights",
+   "title": "What Are Open Weights? Why People Want GPT-4o Released",
+   "date": "Wed, 07 Oct 2026 16:24:58 GMT",
+   "description": "Open weights means you can download a model and run it yourself. What the GPT-4o petition is really asking, and why releasing the weights is the hard part."
+  },
+  {
+   "slug": "what-does-the-bible-say-about-ai",
+   "title": "What Does the Bible Say About AI?",
+   "date": "Sat, 26 Sep 2026 09:00:00 GMT",
+   "description": "The Bible never mentions AI, but it says plenty about who we are, what we make and who we trust. An AI engineer who builds a Bible app on what that means."
+  },
+  {
+   "slug": "what-i-learned-from-getting-pushed-off-my-bicycle",
+   "title": "What I Learned From Getting Pushed Off My Bicycle",
+   "date": "Wed, 15 Jan 2020 08:56:36 GMT",
+   "description": "A blog post about things I learned after being randomly attacked on the streets of Berlin when a stranger pushed me off my bicycle."
+  },
+  {
+   "slug": "what-is-an-agent-harness",
+   "title": "What Is an Agent Harness? Harness Engineering Explained",
+   "date": "Mon, 14 Sep 2026 09:47:55 GMT",
+   "description": "An agent harness is everything around an AI model that grounds it in reality: tools, context, guardrails, the loop and verification. How to build one."
+  },
+  {
+   "slug": "what-is-good-taste-in-software",
+   "title": "What Is Good Taste in Software? How to Develop It",
+   "date": "Sun, 20 Sep 2026 10:00:00 GMT",
+   "description": "Good taste in software is a trainable skill: judging quality against external standards. 6 practice protocols, with the research under each one."
+  },
+  {
+   "slug": "what-is-react-fiber",
+   "title": "What Is React Fiber? How React Works Under the Hood",
+   "date": "Wed, 30 Sep 2026 08:30:00 GMT",
+   "description": "React Fiber is how React has rendered since version 16: a tree of small units of work it can pause and resume. How it works, from the React source."
+  },
+  {
+   "slug": "what-is-webmcp",
+   "title": "What Is WebMCP? How My Website Gives AI Agents Tools",
+   "date": "Fri, 02 Oct 2026 07:50:41 GMT",
+   "description": "WebMCP is a proposed web standard that lets a page give AI agents tools to call. How tej.as offers agents 4 of them, and what WebMCP is good for."
+  },
+  {
+   "slug": "why-ai-cant-replace-human-taste",
+   "title": "Why AI Can't Replace Human Taste and Creativity",
+   "date": "Mon, 12 Oct 2026 15:29:17 GMT",
+   "description": "AI can't replace human creativity or taste: we crave novelty and a model makes what's most common. My answer to a question after my talk in Prague."
+  },
+  {
+   "slug": "why-i-do-not-prefer-speaking-at-remote-conferences",
+   "title": "Why I Don't Prefer Speaking at Remote Conferences",
+   "date": "Mon, 16 Mar 2020 16:36:28 GMT",
+   "description": "Why I'd rather not speak at virtual conferences during COVID-19: the hallway conversations are the point, and video calls lose that connection."
+  },
+  {
+   "slug": "why-i-think-remote-work-is-incredible",
+   "title": "Why I Think Remote Work is Incredible",
+   "date": "Mon, 27 Jan 2020 13:40:59 GMT",
+   "description": "Two months into my first fully remote job, I compare it with office life: deeper focus, better health, and the sleep rhythm trap I had to fix."
+  }
+ ]
+}

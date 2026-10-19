@@ -1,0 +1,78 @@
+---
+/* /podcast/ep/[slug] — episode title + description placeholder + Acast listen link. */
+import Base from "../../../layouts/Base.astro";
+import content from "../../../data/content.json";
+
+const FEED = "https://feeds.acast.com/public/shows/contejas-code";
+
+export function getStaticPaths() {
+  return content.episodes.map((ep) => ({
+    params: { slug: ep.slug },
+    props: { episode: ep },
+  }));
+}
+
+const { episode } = Astro.props;
+---
+
+<Base
+  title={`${episode.title} | ConTejas Code`}
+  description={`ConTejas Code episode: ${episode.title} — a long-form conversation for engineers, hosted by Tejas Kumar.`}
+  current="/podcast"
+  routeName="/podcast/ep/[slug]"
+>
+  <nav aria-label="Breadcrumb" class="crumb">
+    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><a href="/podcast">Podcast</a><span aria-hidden="true">/</span><span aria-current="page">{episode.title}</span>
+  </nav>
+
+  <article class="episode">
+    <header class="ep-head">
+      <p class="text-micro ep-kicker">ConTejas Code</p>
+      <h1 class="text-major">{episode.title}</h1>
+    </header>
+
+    <div class="placeholder" role="note" aria-label="Episode description placeholder">
+      <p class="text-label">[CONTENT PLACEHOLDER — episode description not in evidence package]</p>
+    </div>
+
+    <p class="listen-row">
+      <a class="btn" href={FEED} target="_blank" rel="noopener">Listen on Acast</a>
+    </p>
+
+    <footer class="ep-foot">
+      <a href="/podcast">&larr; All episodes</a>
+    </footer>
+  </article>
+</Base>
+
+<style>
+  .crumb {
+    font-family: var(--font-mono);
+    font-size: var(--t-micro);
+    letter-spacing: var(--track-micro);
+    text-transform: uppercase;
+    color: var(--fg-3);
+    display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;
+    padding: 2.5rem 1.5rem 0; max-width: 72rem; margin: 0 auto;
+  }
+  .crumb a { color: var(--fg-3); }
+  .crumb a:hover { color: var(--accent); }
+  .episode { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem 6rem; }
+  .ep-head { padding: 2rem 0 2.5rem; max-width: 52rem; }
+  .ep-kicker { color: var(--accent); margin: 0 0 1.25rem; }
+  .ep-head h1 { margin: 0; }
+  .placeholder {
+    border: 1px dashed var(--hairline-lit); border-radius: 0.75rem;
+    padding: 4rem 1.5rem; background: var(--bg-plate);
+    text-align: center; color: var(--fg-3); max-width: 46rem;
+  }
+  .listen-row { margin-top: 2.5rem; }
+  .btn {
+    display: inline-block; padding: 0.9rem 1.75rem; border-radius: 999px;
+    background: var(--accent); color: var(--on-red);
+    font-family: var(--font-mono); font-size: var(--t-label);
+    letter-spacing: var(--track-label); text-transform: uppercase; text-decoration: none;
+  }
+  .btn:hover { opacity: 0.88; }
+  .ep-foot { margin-top: 3rem; border-top: 1px solid var(--hairline); padding-top: 1.5rem; }
+</style>

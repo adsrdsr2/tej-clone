@@ -1,0 +1,131 @@
+---
+/* Shared site footer: brand block + 4 sitemap columns + legal bar. */
+const cols = [
+  {
+    title: "Work with me",
+    links: [
+      { href: "/speaking", label: "Keynote speaking" },
+      { href: "/workshops", label: "AI and React workshops" },
+      { href: "/calendar", label: "Where I'll be next" },
+      { href: "/investing", label: "Angel investing" },
+      { href: "/#contact", label: "Contact" },
+    ],
+  },
+  {
+    title: "Read and watch",
+    links: [
+      { href: "/blog", label: "Blog" },
+      { href: "/talks", label: "Talk transcripts" },
+      { href: "/podcast", label: "ConTejas Code podcast" },
+      { href: "/react", label: "Fluent React, my book" },
+    ],
+  },
+  {
+    title: "About me",
+    links: [
+      { href: "/about", label: "About" },
+      { href: "/story", label: "My story" },
+      { href: "/status", label: "How I'm doing" },
+    ],
+  },
+  {
+    title: "Elsewhere",
+    links: [
+      { href: "https://x.com/TejasKumar_", label: "X", ext: true },
+      { href: "https://www.linkedin.com/in/tejasq", label: "LinkedIn", ext: true },
+      { href: "https://www.youtube.com/@tejask", label: "YouTube", ext: true },
+      { href: "https://github.com/TejasQ", label: "GitHub", ext: true },
+      { href: "/rss.xml", label: "RSS feed" },
+    ],
+  },
+];
+---
+
+<footer class="site-footer">
+  <div class="shell footer__grid">
+    <div class="footer__brand">
+      <p class="footer__name">Tejas Kumar</p>
+      <p class="footer__bio">
+        AI Engineer at IBM in Berlin. Speaker, author of Fluent React, host of
+        the ConTejas Code podcast.
+      </p>
+    </div>
+    {cols.map((c) => (
+      <nav aria-label={c.title}>
+        <p class="text-micro footer__col-title">{c.title}</p>
+        <ul>
+          {c.links.map((l) => (
+            <li>
+              <a
+                href={l.href}
+                {...(l.ext ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              >
+                {l.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    ))}
+  </div>
+  <div class="shell footer__legal">
+    <p class="text-micro">© 2026 Tejas Kumar, Berlin</p>
+    <p class="text-micro footer__credit">Portrait by Taz Singh</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--hairline);
+    padding-block: var(--air-l) var(--air-m);
+  }
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 1.4fr repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+  .footer__name {
+    font-family: var(--font-display);
+    font-weight: var(--w-heavy);
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+  }
+  .footer__bio {
+    color: var(--fg-2);
+    font-size: var(--t-small);
+    max-width: 30ch;
+  }
+  .footer__col-title {
+    color: var(--fg-3);
+    margin-bottom: 1rem;
+  }
+  .site-footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+  }
+  .site-footer nav a {
+    font-size: var(--t-small);
+    color: var(--fg-2);
+    transition: color var(--dur-fast) var(--ease);
+  }
+  .site-footer nav a:hover { color: var(--fg); }
+  .footer__legal {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: var(--air-l);
+    padding-top: var(--air-s);
+    border-top: 1px solid var(--hairline);
+    color: var(--fg-3);
+  }
+  @media (width <= 1024px) {
+    .footer__grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (width <= 520px) {
+    .footer__grid { grid-template-columns: 1fr; }
+    .footer__legal { flex-direction: column; }
+  }
+</style>

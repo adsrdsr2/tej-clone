@@ -1,0 +1,86 @@
+---
+/* /talks/[slug] — title + event + transcript placeholder + YouTube link via coverflow match. */
+import Base from "../../layouts/Base.astro";
+import content from "../../data/content.json";
+
+export function getStaticPaths() {
+  const norm = (s: string) =>
+    s
+      .toLowerCase()
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "");
+  const byTitle = new Map(
+    content.coverflow.map((c) => [norm(c.title), c.youtube])
+  );
+  return content.transcripts.map((t) => ({
+    params: { slug: t.slug },
+    props: { talk: t, youtube: byTitle.get(norm(t.title)) ?? null },
+  }));
+}
+
+const { talk, youtube } = Astro.props;
+const watchUrl = youtube ? `https://www.youtube.com/watch?v=${youtube}` : null;
+---
+
+<Base
+  title={`${talk.title} — transcript | Tejas Kumar`}
+  description={`Full transcript of Tejas Kumar's talk "${talk.title}" at ${talk.event}.`}
+  current="/talks"
+  routeName="/talks/[slug]"
+>
+  <nav aria-label="Breadcrumb" class="crumb">
+    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><a href="/talks">Talk transcripts</a><span aria-hidden="true">/</span><span aria-current="page">{talk.title}</span>
+  </nav>
+
+  <article class="talk">
+    <header class="talk-head">
+      <p class="text-micro talk-event">{talk.event}</p>
+      <h1 class="text-major">{talk.title}</h1>
+      {watchUrl && (
+        <p class="watch">
+          <a class="btn btn--ghost" href={watchUrl} target="_blank" rel="noopener">Watch on YouTube</a>
+        </p>
+      )}
+    </header>
+
+    <div class="placeholder" role="note" aria-label="Transcript text placeholder">
+      <p class="text-label">[CONTENT PLACEHOLDER — full text not in evidence package]</p>
+    </div>
+
+    <footer class="talk-foot">
+      <a href="/talks">&larr; All transcripts</a>
+    </footer>
+  </article>
+</Base>
+
+<style>
+  .crumb {
+    font-family: var(--font-mono);
+    font-size: var(--t-micro);
+    letter-spacing: var(--track-micro);
+    text-transform: uppercase;
+    color: var(--fg-3);
+    display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;
+    padding: 2.5rem 1.5rem 0; max-width: 72rem; margin: 0 auto;
+  }
+  .crumb a { color: var(--fg-3); }
+  .crumb a:hover { color: var(--accent); }
+  .talk { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem 6rem; }
+  .talk-head { padding: 2rem 0 2.5rem; max-width: 52rem; }
+  .talk-event { color: var(--accent); margin: 0 0 1.25rem; }
+  .talk-head h1 { margin: 0 0 1.5rem; }
+  .watch { margin: 0; }
+  .btn {
+    display: inline-block; padding: 0.9rem 1.75rem; border-radius: 999px;
+    font-family: var(--font-mono); font-size: var(--t-label);
+    letter-spacing: var(--track-label); text-transform: uppercase; text-decoration: none;
+  }
+  .btn--ghost { background: transparent; color: var(--fg); border: 1px solid var(--hairline-lit); }
+  .btn:hover { opacity: 0.88; }
+  .placeholder {
+    border: 1px dashed var(--hairline-lit); border-radius: 0.75rem;
+    padding: 5rem 1.5rem; background: var(--bg-plate);
+    text-align: center; color: var(--fg-3); max-width: 46rem;
+  }
+  .talk-foot { margin-top: 3rem; border-top: 1px solid var(--hairline); padding-top: 1.5rem; }
+</style>

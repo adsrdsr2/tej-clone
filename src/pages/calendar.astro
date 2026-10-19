@@ -1,0 +1,74 @@
+---
+/* /calendar — upcoming engagements (static, documented placeholder). */
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="Tejas Kumar's speaking calendar: where I'll be next"
+  description="Tejas Kumar's speaking calendar: where he'll be next — 119 engagements across 31 countries."
+  current="/calendar"
+  routeName="/calendar"
+>
+  <nav aria-label="Breadcrumb" class="crumb">
+    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Calendar</span>
+  </nav>
+
+  <header class="page-head">
+    <h1 class="text-major">Where I'll be.</h1>
+    <p class="text-lede lede">
+      <strong>119 engagements across 31 countries</strong> — and counting.
+    </p>
+  </header>
+
+  <section aria-labelledby="upcoming">
+    <h2 id="upcoming" class="text-minor">Upcoming</h2>
+    <div class="placeholder" role="note" aria-label="Upcoming engagements placeholder">
+      <p class="text-label">[CALENDAR PLACEHOLDER — engagement dates and venues not in evidence package]</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="book-date">
+    <h2 id="book-date" class="text-minor">Book a date</h2>
+    <p class="text-body">
+      Want me at your event? Check my availability and reserve your date.
+    </p>
+    <p class="cta-row">
+      <a class="btn" href="/speaking">See speaking fees</a>
+      <a class="btn btn--ghost" href="/contact">Book Tejas</a>
+    </p>
+  </section>
+</Base>
+
+<style>
+  .crumb {
+    font-family: var(--font-mono);
+    font-size: var(--t-micro);
+    letter-spacing: var(--track-micro);
+    text-transform: uppercase;
+    color: var(--fg-3);
+    display: flex; gap: 0.75rem; align-items: center;
+    padding: 2.5rem 1.5rem 0; max-width: 72rem; margin: 0 auto;
+  }
+  .crumb a { color: var(--fg-3); }
+  .crumb a:hover { color: var(--accent); }
+  .page-head { max-width: 72rem; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+  .page-head h1 { margin: 0 0 1.5rem; }
+  .lede { max-width: 42rem; color: var(--fg-2); }
+  section { max-width: 72rem; margin: 0 auto; padding: 2.5rem 1.5rem; border-top: 1px solid var(--hairline); }
+  section h2 { margin: 0 0 1.5rem; }
+  section p { max-width: 46rem; color: var(--fg-2); }
+  .placeholder {
+    border: 1px dashed var(--hairline-lit); border-radius: 0.75rem;
+    padding: 3.5rem 1.5rem; background: var(--bg-plate);
+    text-align: center; color: var(--fg-3);
+  }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+  .btn {
+    display: inline-block; padding: 0.9rem 1.75rem; border-radius: 999px;
+    background: var(--accent); color: var(--on-red);
+    font-family: var(--font-mono); font-size: var(--t-label);
+    letter-spacing: var(--track-label); text-transform: uppercase; text-decoration: none;
+  }
+  .btn--ghost { background: transparent; color: var(--fg); border: 1px solid var(--hairline-lit); }
+  .btn:hover { opacity: 0.88; }
+</style>

@@ -1,0 +1,82 @@
+---
+/* /investing — angel thesis (short real text from llms) + portfolio placeholder. */
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="Tejas Kumar: angel investor in early stage startups"
+  description="Tejas Kumar is an angel investor in early-stage startups: his thesis, his portfolio, and how to pitch him."
+  current="/investing"
+  routeName="/investing"
+>
+  <nav aria-label="Breadcrumb" class="crumb">
+    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Investing</span>
+  </nav>
+
+  <header class="page-head">
+    <h1 class="text-major">I invest early.</h1>
+    <p class="text-lede lede">Angel investing in early-stage startups.</p>
+  </header>
+
+  <section aria-labelledby="thesis">
+    <h2 id="thesis" class="text-minor">The thesis</h2>
+    <p class="text-body">
+      I invest early in <strong>every company, the outcomes, the coverage behind
+      them, and how to pitch him</strong> — that's the lens I bring: I look at
+      the team, the outcomes they're chasing, and the story behind them before
+      anything else.
+    </p>
+    <p class="text-body">
+      If you're building something ambitious and want my support, pitch me like
+      you'd pitch anyone: show me the problem, the team, and why now.
+    </p>
+  </section>
+
+  <section aria-labelledby="portfolio">
+    <h2 id="portfolio" class="text-minor">Portfolio</h2>
+    <div class="placeholder" role="note" aria-label="Portfolio placeholder">
+      <p class="text-label">[PORTFOLIO PLACEHOLDER — startups backed not in evidence package]</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="pitch">
+    <h2 id="pitch" class="text-minor">Pitch me</h2>
+    <p class="cta-row">
+      <a class="btn" href="/contact">Send your pitch</a>
+    </p>
+  </section>
+</Base>
+
+<style>
+  .crumb {
+    font-family: var(--font-mono);
+    font-size: var(--t-micro);
+    letter-spacing: var(--track-micro);
+    text-transform: uppercase;
+    color: var(--fg-3);
+    display: flex; gap: 0.75rem; align-items: center;
+    padding: 2.5rem 1.5rem 0; max-width: 72rem; margin: 0 auto;
+  }
+  .crumb a { color: var(--fg-3); }
+  .crumb a:hover { color: var(--accent); }
+  .page-head { max-width: 72rem; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+  .page-head h1 { margin: 0 0 1.5rem; }
+  .lede { max-width: 42rem; color: var(--fg-2); }
+  section { max-width: 72rem; margin: 0 auto; padding: 2.5rem 1.5rem; border-top: 1px solid var(--hairline); }
+  section h2 { margin: 0 0 1.5rem; }
+  section p { max-width: 46rem; color: var(--fg-2); }
+  section p + p { margin-top: 1.25rem; }
+  .placeholder {
+    border: 1px dashed var(--hairline-lit); border-radius: 0.75rem;
+    padding: 3.5rem 1.5rem; background: var(--bg-plate);
+    text-align: center; color: var(--fg-3);
+  }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem; }
+  .btn {
+    display: inline-block; padding: 0.9rem 1.75rem; border-radius: 999px;
+    background: var(--accent); color: var(--on-red);
+    font-family: var(--font-mono); font-size: var(--t-label);
+    letter-spacing: var(--track-label); text-transform: uppercase; text-decoration: none;
+  }
+  .btn:hover { opacity: 0.88; }
+</style>

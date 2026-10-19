@@ -1,0 +1,71 @@
+---
+/* /preaching — guest-preacher invitation for churches. */
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="Invite Tejas Kumar to Preach: Guest Preacher for Church"
+  description="Invite Tejas Kumar as a guest preacher for your church — his testimony, his story, and how to invite him."
+  current="/preaching"
+  routeName="/preaching"
+>
+  <nav aria-label="Breadcrumb" class="crumb">
+    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Preaching</span>
+  </nav>
+
+  <header class="page-head">
+    <h1 class="text-major">Invite me to preach.</h1>
+    <p class="text-lede lede">
+      I'd be honored to serve your church as a guest preacher — sharing my
+      testimony and the thread of grace that runs through my story.
+    </p>
+  </header>
+
+  <section aria-labelledby="about-my-preaching">
+    <h2 id="about-my-preaching" class="text-minor">What I preach</h2>
+    <p class="text-body">
+      My preaching centers on my testimony — how grace found me, what it
+      changed, and what it means to live surrendered. If your church would
+      like to hear that story, read <a href="/story">the thread</a> first.
+    </p>
+  </section>
+
+  <section aria-labelledby="invite">
+    <h2 id="invite" class="text-minor">Invite me</h2>
+    <p class="text-body">
+      Tell me about your church, your congregation, and the Sunday you have in
+      mind — I'll reply personally.
+    </p>
+    <p class="cta-row">
+      <a class="btn" href="/contact">Invite Tejas</a>
+    </p>
+  </section>
+</Base>
+
+<style>
+  .crumb {
+    font-family: var(--font-mono);
+    font-size: var(--t-micro);
+    letter-spacing: var(--track-micro);
+    text-transform: uppercase;
+    color: var(--fg-3);
+    display: flex; gap: 0.75rem; align-items: center;
+    padding: 2.5rem 1.5rem 0; max-width: 72rem; margin: 0 auto;
+  }
+  .crumb a { color: var(--fg-3); }
+  .crumb a:hover { color: var(--accent); }
+  .page-head { max-width: 72rem; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+  .page-head h1 { margin: 0 0 1.5rem; }
+  .lede { max-width: 42rem; color: var(--fg-2); }
+  section { max-width: 72rem; margin: 0 auto; padding: 2.5rem 1.5rem; border-top: 1px solid var(--hairline); }
+  section h2 { margin: 0 0 1.5rem; }
+  section p { max-width: 46rem; color: var(--fg-2); }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+  .btn {
+    display: inline-block; padding: 0.9rem 1.75rem; border-radius: 999px;
+    background: var(--accent); color: var(--on-red);
+    font-family: var(--font-mono); font-size: var(--t-label);
+    letter-spacing: var(--track-label); text-transform: uppercase; text-decoration: none;
+  }
+  .btn:hover { opacity: 0.88; }
+</style>

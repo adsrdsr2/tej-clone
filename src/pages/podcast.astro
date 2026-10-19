@@ -1,0 +1,87 @@
+---
+/* /podcast — 98-episode directory: 12 featured cards + simple list for the rest. */
+import Base from "../layouts/Base.astro";
+import content from "../data/content.json";
+
+const episodes = content.episodes;
+const featured = episodes.slice(0, 12);
+const rest = episodes.slice(12);
+const FEED = "https://feeds.acast.com/public/shows/contejas-code";
+---
+
+<Base
+  title="ConTejas Code: A Long Form Podcast for Engineers"
+  description="ConTejas Code — a long-form podcast for engineers, hosted by Tejas Kumar. 98 episodes with the brightest minds in engineering."
+  current="/podcast"
+  routeName="/podcast"
+>
+  <nav aria-label="Breadcrumb" class="crumb">
+    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Podcast</span>
+  </nav>
+
+  <header class="page-head">
+    <h1 class="text-major">Learn from the brightest minds in engineering</h1>
+    <p class="text-lede lede">
+      ConTejas Code — a long-form podcast for engineers. {episodes.length}{" "}
+      episodes. <a href={FEED}>Listen on Acast</a>.
+    </p>
+  </header>
+
+  <section class="featured" aria-labelledby="latest-episodes">
+    <h2 id="latest-episodes" class="text-minor">Latest episodes</h2>
+    <div class="ep-grid">
+      {featured.map((ep) => (
+        <article class="ep-card">
+          <a class="ep-card__link" href={`/podcast/ep/${ep.slug}`}>
+            <h3 class="ep-card__title text-body">{ep.title}</h3>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="archive" aria-labelledby="all-episodes">
+    <h2 id="all-episodes" class="text-minor">
+      All episodes <span class="count text-micro">({featured.length} of {episodes.length})</span>
+    </h2>
+    <ol class="ep-list">
+      {rest.map((ep) => (
+        <li>
+          <a href={`/podcast/ep/${ep.slug}`}>{ep.title}</a>
+        </li>
+      ))}
+    </ol>
+  </section>
+</Base>
+
+<style>
+  .crumb {
+    font-family: var(--font-mono);
+    font-size: var(--t-micro);
+    letter-spacing: var(--track-micro);
+    text-transform: uppercase;
+    color: var(--fg-3);
+    display: flex; gap: 0.75rem; align-items: center;
+    padding: 2.5rem 1.5rem 0; max-width: 72rem; margin: 0 auto;
+  }
+  .crumb a { color: var(--fg-3); }
+  .crumb a:hover { color: var(--accent); }
+  .page-head { max-width: 72rem; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+  .page-head h1 { margin: 0 0 1.5rem; }
+  .lede { max-width: 44rem; color: var(--fg-2); }
+  section { max-width: 72rem; margin: 0 auto; padding: 2.5rem 1.5rem; }
+  section h2 { margin: 0 0 1.75rem; }
+  .count { color: var(--fg-3); margin-left: 0.75rem; }
+  .ep-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); border-radius: 0.75rem; overflow: hidden; }
+  .ep-card { background: var(--bg); }
+  .ep-card__link { display: block; padding: 1.75rem 1.5rem; text-decoration: none; color: inherit; height: 100%; }
+  .ep-card__link:hover { background: var(--bg-plate); }
+  .ep-card__title { margin: 0; font-weight: var(--w-mid); line-height: 1.35; }
+  .ep-card__link:hover .ep-card__title { color: var(--accent); }
+  .archive { border-top: 1px solid var(--hairline); }
+  .ep-list { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 3rem; }
+  .ep-list li { break-inside: avoid; padding: 0.5rem 0; border-top: 1px solid var(--hairline); }
+  .ep-list a { text-decoration: none; color: var(--fg-2); }
+  .ep-list a:hover { color: var(--accent); }
+  @media (max-width: 640px) { .ep-list { columns: 1; } }
+</style>

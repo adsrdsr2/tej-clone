@@ -1,0 +1,114 @@
+---
+/* Base layout: head, blocking theme init, shared chrome (topbar/footer),
+   scroll-progress dot, JSON-LD. */
+import "../styles/global.css";
+import Topbar from "../components/Topbar.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+  current?: string;
+  routeName?: string;
+  ogImage?: string;
+}
+const {
+  title,
+  description = "Tejas Kumar — AI Engineer at IBM in Berlin. Speaker, author of Fluent React, host of the ConTejas Code podcast.",
+  current = "/",
+  routeName = "/",
+  ogImage = "/img/og/home.png",
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, "https://tej-clone.local").toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="generator" content="Astro v7.0.6" />
+    <meta name="theme-color" content="#F4F1EA" />
+    <meta name="sentry-route-name" content={routeName} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="application/rss+xml" title="Tejas's Blog" href="/rss.xml" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={ogImage} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="preload"
+      href="/fonts/jost-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/switzer-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script is:inline>
+      // Theme init — runs before paint. Verified logic from the reference:
+      // localStorage "theme" ("light"/"dark") → OS prefers-color-scheme → dark default.
+      (function () {
+        var t = null;
+        try {
+          t = localStorage.getItem("theme");
+        } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "name": "Tejas Kumar",
+            "jobTitle": "AI Engineer",
+            "worksFor": { "@type": "Organization", "name": "IBM" },
+            "address": { "@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE" },
+            "sameAs": [
+              "https://x.com/TejasKumar_",
+              "https://github.com/TejasQ",
+              "https://www.linkedin.com/in/tejasq",
+              "https://www.youtube.com/@tejask"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "name": "Tejas Kumar",
+            "url": "https://tej-clone.local/"
+          },
+          {
+            "@type": "WebPage",
+            "name": title,
+            "url": canonical
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="thread__head" aria-hidden="true"></div>
+    <Topbar current={current} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
