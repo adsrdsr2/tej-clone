@@ -1,4 +1,5 @@
 ---
+import { u } from "../../../lib/url";
 /* /podcast/ep/[slug] — episode title + description placeholder + Acast listen link. */
 import Base from "../../../layouts/Base.astro";
 import content from "../../../data/content.json";
@@ -22,7 +23,7 @@ const { episode } = Astro.props;
   routeName="/podcast/ep/[slug]"
 >
   <nav aria-label="Breadcrumb" class="crumb">
-    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><a href="/podcast">Podcast</a><span aria-hidden="true">/</span><span aria-current="page">{episode.title}</span>
+    <a href={u("/")}>Tejas Kumar</a><span aria-hidden="true">/</span><a href={u("/podcast")}>Podcast</a><span aria-hidden="true">/</span><span aria-current="page">{episode.title}</span>
   </nav>
 
   <article class="episode">
@@ -40,7 +41,7 @@ const { episode } = Astro.props;
     </p>
 
     <footer class="ep-foot">
-      <a href="/podcast">&larr; All episodes</a>
+      <a href={u("/podcast")}>&larr; All episodes</a>
     </footer>
   </article>
 </Base>

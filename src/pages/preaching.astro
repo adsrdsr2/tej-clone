@@ -1,4 +1,5 @@
 ---
+import { u } from "../lib/url";
 /* /preaching — guest-preacher invitation for churches. */
 import Base from "../layouts/Base.astro";
 ---
@@ -10,7 +11,7 @@ import Base from "../layouts/Base.astro";
   routeName="/preaching"
 >
   <nav aria-label="Breadcrumb" class="crumb">
-    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Preaching</span>
+    <a href={u("/")}>Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Preaching</span>
   </nav>
 
   <header class="page-head">
@@ -26,7 +27,7 @@ import Base from "../layouts/Base.astro";
     <p class="text-body">
       My preaching centers on my testimony — how grace found me, what it
       changed, and what it means to live surrendered. If your church would
-      like to hear that story, read <a href="/story">the thread</a> first.
+      like to hear that story, read <a href={u("/story")}>the thread</a> first.
     </p>
   </section>
 
@@ -37,7 +38,7 @@ import Base from "../layouts/Base.astro";
       mind — I'll reply personally.
     </p>
     <p class="cta-row">
-      <a class="btn" href="/contact">Invite Tejas</a>
+      <a class="btn" href={u("/#contact")}>Invite Tejas</a>
     </p>
   </section>
 </Base>

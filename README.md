@@ -36,6 +36,61 @@ npm run preview
 Node 18+ and the Playwright Chromium in `~/.cache/ms-playwright` are enough;
 no other system dependencies.
 
+## Deploy to GitHub Pages
+
+The site is fully static (`output: 'static'`, no server adapter) and ships with
+a production GitHub Actions workflow at `.github/workflows/deploy.yml`.
+
+**Live URL (once enabled):** https://adsrdsr2.github.io/tej-clone/
+
+**How it works**
+
+- Pushes to `main` (and manual runs via *workflow_dispatch*) trigger the
+  workflow: checkout → Node 22 → `npm ci` (deterministic, from
+  `package-lock.json`) → `npm run build` → upload `dist/` as a Pages artifact
+  → deploy with `actions/deploy-pages@v4` into the `github-pages` environment.
+- `astro.config.mjs` reads the Actions environment (`GITHUB_ACTIONS`,
+  `GITHUB_REPOSITORY`) to set the correct `base` and `site`:
+  - project repos → `base: '/tej-clone'`, `site: https://adsrdsr2.github.io/tej-clone`
+  - `<owner>.github.io` repos → served from the domain root, no base prefix
+  - local dev/preview → `base: '/'`, `site: http://localhost:4321`
+- Every internal link, image, font, feed and icon goes through the shared
+  `src/lib/url.ts` helper (`u("/speaking")`), so nothing hard-codes the
+  repository name and local development keeps working unchanged.
+
+**One-time setup**
+
+1. Push this repo to GitHub (done: `adsrdsr2/tej-clone`, branch `main`).
+2. In the repository: **Settings → Pages → Build and deployment → Source:
+   GitHub Actions**. (Enabling via the REST API returned 404 for this repo,
+   so the click-through is required once.)
+3. Push to `main` (or run the workflow manually) — the site deploys
+   automatically from then on.
+
+**Static replacements for server-dependent features**
+
+- *Ask widget* — already a client-side SolidJS island searching a local
+  `content.json` index; the submit button was relabeled from "Search with AI"
+  to **"Search"** so it never implies a live AI backend. No `/api/askPodcast`
+  route ever existed in this clone.
+- *WebMCP endpoints* (`search-content`, `list-talks`, …) — never existed in
+  this clone (only a blog post *about* WebMCP); nothing to disable.
+- *Status page* — already a labeled static reproduction; "live" wording was
+  softened to "static snapshot".
+- *Contact* — no `/contact` page exists; CTAs now point at the homepage
+  `#contact` section (a `mailto:` placeholder, honestly labeled).
+- *No other backends* — no forms, analytics, or error-reporting services are
+  wired up; nothing phones home.
+
+**Verify locally**
+
+```bash
+npm run build                                # base '/'
+npm run preview                              # http://localhost:4321
+GITHUB_ACTIONS=true GITHUB_REPOSITORY=adsrdsr2/tej-clone npm run build   # Pages build
+```
+
+
 ## Layout
 
 | Path | Contents |

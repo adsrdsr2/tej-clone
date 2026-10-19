@@ -1,4 +1,5 @@
 ---
+import { u } from "../../lib/url";
 /* /talks/[slug] — title + event + transcript placeholder + YouTube link via coverflow match. */
 import Base from "../../layouts/Base.astro";
 import content from "../../data/content.json";
@@ -29,7 +30,7 @@ const watchUrl = youtube ? `https://www.youtube.com/watch?v=${youtube}` : null;
   routeName="/talks/[slug]"
 >
   <nav aria-label="Breadcrumb" class="crumb">
-    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><a href="/talks">Talk transcripts</a><span aria-hidden="true">/</span><span aria-current="page">{talk.title}</span>
+    <a href={u("/")}>Tejas Kumar</a><span aria-hidden="true">/</span><a href={u("/talks")}>Talk transcripts</a><span aria-hidden="true">/</span><span aria-current="page">{talk.title}</span>
   </nav>
 
   <article class="talk">
@@ -48,7 +49,7 @@ const watchUrl = youtube ? `https://www.youtube.com/watch?v=${youtube}` : null;
     </div>
 
     <footer class="talk-foot">
-      <a href="/talks">&larr; All transcripts</a>
+      <a href={u("/talks")}>&larr; All transcripts</a>
     </footer>
   </article>
 </Base>

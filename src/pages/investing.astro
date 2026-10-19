@@ -1,4 +1,5 @@
 ---
+import { u } from "../lib/url";
 /* /investing — angel thesis (short real text from llms) + portfolio placeholder. */
 import Base from "../layouts/Base.astro";
 ---
@@ -10,7 +11,7 @@ import Base from "../layouts/Base.astro";
   routeName="/investing"
 >
   <nav aria-label="Breadcrumb" class="crumb">
-    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Investing</span>
+    <a href={u("/")}>Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Investing</span>
   </nav>
 
   <header class="page-head">
@@ -42,7 +43,7 @@ import Base from "../layouts/Base.astro";
   <section aria-labelledby="pitch">
     <h2 id="pitch" class="text-minor">Pitch me</h2>
     <p class="cta-row">
-      <a class="btn" href="/contact">Send your pitch</a>
+      <a class="btn" href={u("/#contact")}>Send your pitch</a>
     </p>
   </section>
 </Base>

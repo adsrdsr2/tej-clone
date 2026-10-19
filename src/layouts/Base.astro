@@ -1,4 +1,5 @@
 ---
+import { u } from "../lib/url";
 /* Base layout: head, blocking theme init, shared chrome (topbar/footer),
    scroll-progress dot, JSON-LD. */
 import "../styles/global.css";
@@ -17,9 +18,11 @@ const {
   description = "Tejas Kumar — AI Engineer at IBM in Berlin. Speaker, author of Fluent React, host of the ConTejas Code podcast.",
   current = "/",
   routeName = "/",
-  ogImage = "/img/og/home.png",
+  ogImage = u("/img/og/home.png"),
 } = Astro.props;
-const canonical = new URL(Astro.url.pathname, "https://tej-clone.local").toString();
+const siteUrl = Astro.site ?? "https://tej-clone.local";
+const canonical = new URL(Astro.url.pathname, siteUrl).href;
+const ogImageUrl = new URL(ogImage, siteUrl).href;
 ---
 
 <!doctype html>
@@ -33,22 +36,22 @@ const canonical = new URL(Astro.url.pathname, "https://tej-clone.local").toStrin
     <meta name="theme-color" content="#F4F1EA" />
     <meta name="sentry-route-name" content={routeName} />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" type="application/rss+xml" title="Tejas's Blog" href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Tejas's Blog" href={u("/rss.xml")} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content={ogImage} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:image" content={ogImageUrl} />
+    <link rel="icon" type="image/svg+xml" href={u("/favicon.svg")} />
     <link
       rel="preload"
-      href="/fonts/jost-var.woff2"
+      href={u("/fonts/jost-var.woff2")}
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="/fonts/switzer-400.woff2"
+      href={u("/fonts/switzer-400.woff2")}
       as="font"
       type="font/woff2"
       crossorigin
@@ -91,12 +94,12 @@ const canonical = new URL(Astro.url.pathname, "https://tej-clone.local").toStrin
           {
             "@type": "WebSite",
             "name": "Tejas Kumar",
-            "url": "https://tej-clone.local/"
+            "url": "{siteUrl}/"
           },
           {
             "@type": "WebPage",
-            "name": title,
-            "url": canonical
+            "name": "{title}",
+            "url": "{canonical}"
           }
         ]
       }

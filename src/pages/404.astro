@@ -1,4 +1,5 @@
 ---
+import { u } from "../lib/url";
 /* 404 — not found. */
 import Base from "../layouts/Base.astro";
 ---
@@ -16,8 +17,8 @@ import Base from "../layouts/Base.astro";
       This page doesn't exist — but plenty of others do.
     </p>
     <p class="cta-row">
-      <a class="btn" href="/">Back home</a>
-      <a class="btn btn--ghost" href="/blog">Read the blog</a>
+      <a class="btn" href={u("/")}>Back home</a>
+      <a class="btn btn--ghost" href={u("/blog")}>Read the blog</a>
     </p>
   </div>
 </Base>

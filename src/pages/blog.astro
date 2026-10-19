@@ -1,4 +1,5 @@
 ---
+import { u } from "../lib/url";
 /* /blog — 31 PostCards, newest to oldest (content.json order), + RSS link. */
 import Base from "../layouts/Base.astro";
 import content from "../data/content.json";
@@ -18,14 +19,14 @@ const fmt = (d: string) =>
   routeName="/blog"
 >
   <nav aria-label="Breadcrumb" class="crumb">
-    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Blog</span>
+    <a href={u("/")}>Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Blog</span>
   </nav>
 
   <header class="page-head">
     <h1 class="text-major">I write</h1>
     <p class="text-lede lede">
       Essays and notes on AI, React and engineering — {content.blog.length} posts
-      and counting. <a href="/rss.xml">Subscribe via RSS</a>.
+      and counting. <a href={u("/rss.xml")}>Subscribe via RSS</a>.
     </p>
   </header>
 
@@ -34,7 +35,7 @@ const fmt = (d: string) =>
     <div class="post-grid">
       {content.blog.map((p) => (
         <article class="post-card">
-          <a class="post-card__link" href={`/blog/${p.slug}`}>
+          <a class="post-card__link" href={u(`/blog/${p.slug}`)}>
             <p class="text-micro post-card__date">{fmt(p.date)}</p>
             <h3 class="post-card__title text-body">{p.title}</h3>
             <p class="post-card__desc text-small">{p.description}</p>

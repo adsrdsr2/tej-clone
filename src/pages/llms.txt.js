@@ -1,7 +1,7 @@
 /* /llms.txt — plain-text index of the site with real links, for LLMs. */
 import content from "../data/content.json";
 
-const SITE = "https://tej.as";
+const SITE = (import.meta.env.SITE ?? "https://tej.as").replace(/\/$/, "");
 
 export async function GET() {
   const lines = [

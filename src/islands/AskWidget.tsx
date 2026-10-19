@@ -18,6 +18,7 @@ import {
   onMount,
 } from "solid-js";
 import content from "../data/content.json";
+import { u } from "../lib/url";
 
 /* ---------- types ---------- */
 type Kind = "blog" | "talk" | "podcast";
@@ -78,7 +79,7 @@ function buildIndex(): Doc[] {
         title: b.title,
         description: b.description ?? "",
         kind: "blog",
-        href: `/blog/${b.slug}`,
+        href: u(`/blog/${b.slug}`),
       });
     for (const t of data.transcripts ?? [])
       docs.push({
@@ -86,7 +87,7 @@ function buildIndex(): Doc[] {
         title: t.title,
         description: t.event ?? "",
         kind: "talk",
-        href: `/talks/${t.slug}`,
+        href: u(`/talks/${t.slug}`),
       });
     for (const e of data.episodes ?? [])
       docs.push({
@@ -94,7 +95,7 @@ function buildIndex(): Doc[] {
         title: e.title,
         description: "",
         kind: "podcast",
-        href: `/podcast/ep/${e.slug}`,
+        href: u(`/podcast/ep/${e.slug}`),
       });
   } catch {
     /* handled by the caller — index stays empty */
@@ -469,7 +470,7 @@ export default function AskWidget() {
           class="ask-widget__submit"
           disabled={status() === "pending" || status() === "streaming"}
         >
-          Search with AI
+          Search
         </button>
       </form>
 

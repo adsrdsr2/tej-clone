@@ -1,21 +1,22 @@
 ---
+import { u } from "../lib/url";
 /* /status — static "How I'm doing" panel; live data source unknown. */
 import Base from "../layouts/Base.astro";
 ---
 
 <Base
-  title="How Tejas Kumar is doing: live health status"
-  description="How Tejas Kumar is doing: his live health status dashboard (static reproduction)."
+  title="How Tejas Kumar is doing: status (static snapshot)"
+  description="How Tejas Kumar is doing: a static snapshot of the original status panel (static reproduction, not live data)."
   current="/status"
   routeName="/status"
 >
   <nav aria-label="Breadcrumb" class="crumb">
-    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Status</span>
+    <a href={u("/")}>Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Status</span>
   </nav>
 
   <header class="page-head">
     <h1 class="text-major">How I'm doing.</h1>
-    <p class="text-lede lede">A live look at my health — updated daily.</p>
+    <p class="text-lede lede">A snapshot of the original status panel — static reproduction, not live data.</p>
   </header>
 
   <section aria-labelledby="status-panel">

@@ -1,4 +1,5 @@
 ---
+import { u } from "../lib/url";
 /* /talks — 26 TalkRow rows: year | title | event, hairline separators. */
 import Base from "../layouts/Base.astro";
 import content from "../data/content.json";
@@ -21,7 +22,7 @@ const talks = content.transcripts.map((t) => ({
   routeName="/talks"
 >
   <nav aria-label="Breadcrumb" class="crumb">
-    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Talk transcripts</span>
+    <a href={u("/")}>Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Talk transcripts</span>
   </nav>
 
   <header class="page-head">
@@ -37,7 +38,7 @@ const talks = content.transcripts.map((t) => ({
     <ul class="talk-rows">
       {talks.map((t) => (
         <li>
-          <a class="talk-row" href={`/talks/${t.slug}`}>
+          <a class="talk-row" href={u(`/talks/${t.slug}`)}>
             <span class="talk-row__year text-micro">{t.year}</span>
             <span class="talk-row__title text-body">{t.title}</span>
             <span class="talk-row__event text-small">{t.event}</span>

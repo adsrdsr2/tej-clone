@@ -1,4 +1,5 @@
 ---
+import { u } from "../lib/url";
 /* Home page — 6 sections per the verified spec:
    1. Hero  2. Speaking (CoverFlow)  3. Fluent React book promo + PraiseWall
    4. Ask widget island  5. Latest writing / podcast promos  6. Contact CTA.
@@ -108,7 +109,7 @@ const XATA_SVG = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true
         </div>
         <div class="hero__portrait">
           <img
-            src="/img/tejas-hero.png"
+            src={u("/img/tejas-hero.png")}
             alt="Tejas Kumar, AI Engineer at IBM, based in Berlin"
             width="880"
             height="880"
@@ -133,7 +134,7 @@ const XATA_SVG = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true
             your JSX and the pixels on screen, and the mental models that make
             it all click.
           </p>
-          <a class="cta" href="/react">
+          <a class="cta" href={u("/react")}>
             <span>About the book</span>
             <span class="cta__arrow" aria-hidden="true">&rarr;</span>
           </a>
@@ -208,18 +209,18 @@ const XATA_SVG = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true
       <article class="promo-card">
         <p class="text-micro promo-card__eyebrow">Blog</p>
         <h2 class="text-minor promo-card__title">
-          <a href="/blog">Latest writing</a>
+          <a href={u("/blog")}>Latest writing</a>
         </h2>
         <ul class="promo-card__list">
           {
             latestPosts.map((post) => (
               <li>
-                <a href={`/blog/${post.slug}`}>{post.title}</a>
+                <a href={u(`/blog/${post.slug}`)}>{post.title}</a>
               </li>
             ))
           }
         </ul>
-        <a class="promo-card__more" href="/blog">
+        <a class="promo-card__more" href={u("/blog")}>
           <span>All 31 posts</span>
           <span aria-hidden="true">&rarr;</span>
         </a>
@@ -227,18 +228,18 @@ const XATA_SVG = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true
       <article class="promo-card">
         <p class="text-micro promo-card__eyebrow">Podcast</p>
         <h2 class="text-minor promo-card__title">
-          <a href="/podcast">ConTejas Code</a>
+          <a href={u("/podcast")}>ConTejas Code</a>
         </h2>
         <ul class="promo-card__list">
           {
             latestEpisodes.map((ep) => (
               <li>
-                <a href={`/podcast/ep/${ep.slug}`}>{ep.title}</a>
+                <a href={u(`/podcast/ep/${ep.slug}`)}>{ep.title}</a>
               </li>
             ))
           }
         </ul>
-        <a class="promo-card__more" href="/podcast">
+        <a class="promo-card__more" href={u("/podcast")}>
           <span>All 98 episodes</span>
           <span aria-hidden="true">&rarr;</span>
         </a>

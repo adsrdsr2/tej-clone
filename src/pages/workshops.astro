@@ -1,4 +1,5 @@
 ---
+import { u } from "../lib/url";
 /* /workshops — team training offers, formats, contact CTA. */
 import Base from "../layouts/Base.astro";
 
@@ -23,7 +24,7 @@ const formats = ["Half-day", "Full-day", "Two-day intensive", "Remote or on-site
   routeName="/workshops"
 >
   <nav aria-label="Breadcrumb" class="crumb">
-    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Workshops</span>
+    <a href={u("/")}>Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Workshops</span>
   </nav>
 
   <header class="page-head">
@@ -62,7 +63,7 @@ const formats = ["Half-day", "Full-day", "Two-day intensive", "Remote or on-site
       workshop around it.
     </p>
     <p class="cta-row">
-      <a class="btn" href="/contact">Get in touch</a>
+      <a class="btn" href={u("/#contact")}>Get in touch</a>
     </p>
   </section>
 </Base>

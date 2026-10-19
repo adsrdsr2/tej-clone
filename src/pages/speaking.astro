@@ -1,4 +1,5 @@
 ---
+import { u } from "../lib/url";
 /* /speaking — topics, formats, verified fees, booking CTA. */
 import Base from "../layouts/Base.astro";
 
@@ -26,7 +27,7 @@ const fees = [
   routeName="/speaking"
 >
   <nav aria-label="Breadcrumb" class="crumb">
-    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Speaking</span>
+    <a href={u("/")}>Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Speaking</span>
   </nav>
 
   <header class="page-head">
@@ -74,7 +75,7 @@ const fees = [
     </div>
     <p class="text-small fineprint">
       Fees exclude travel and accommodation for in-person engagements. See{" "}
-      <a href="/calendar">my calendar</a> for availability.
+      <a href={u("/calendar")}>my calendar</a> for availability.
     </p>
   </section>
 
@@ -85,8 +86,8 @@ const fees = [
       event and I'll confirm availability.
     </p>
     <p class="cta-row">
-      <a class="btn" href="/contact">Book Tejas</a>
-      <a class="btn btn--ghost" href="/calendar">Check availability</a>
+      <a class="btn" href={u("/#contact")}>Book Tejas</a>
+      <a class="btn btn--ghost" href={u("/calendar")}>Check availability</a>
     </p>
   </section>
 </Base>

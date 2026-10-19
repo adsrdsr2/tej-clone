@@ -1,4 +1,5 @@
 ---
+import { u } from "../../lib/url";
 /* /blog/[slug] — PostHero + TOC + prose (excerpt + placeholder) + share + FAQ + related. */
 import Base from "../../layouts/Base.astro";
 import content from "../../data/content.json";
@@ -37,7 +38,7 @@ const shareLinkedIn = `https://www.linkedin.com/sharing/share-offsite/?url=${enc
   routeName="/blog/[slug]"
 >
   <nav aria-label="Breadcrumb" class="crumb">
-    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><a href="/blog">Blog</a><span aria-hidden="true">/</span><span aria-current="page">{post.title}</span>
+    <a href={u("/")}>Tejas Kumar</a><span aria-hidden="true">/</span><a href={u("/blog")}>Blog</a><span aria-hidden="true">/</span><span aria-current="page">{post.title}</span>
   </nav>
 
   <article class="post">
@@ -96,7 +97,7 @@ const shareLinkedIn = `https://www.linkedin.com/sharing/share-offsite/?url=${enc
       <ul class="related-list">
         {related.map((r) => (
           <li>
-            <a href={`/blog/${r.slug}`}>
+            <a href={u(`/blog/${r.slug}`)}>
               <span class="text-micro related-date">{fmt(r.date)}</span>
               <span class="text-body related-title">{r.title}</span>
             </a>

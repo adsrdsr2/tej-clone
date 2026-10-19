@@ -1,7 +1,7 @@
 /* /rss.xml — RSS 2.0 feed of all 31 blog posts, real title/link/description/pubDate. */
 import content from "../data/content.json";
 
-const SITE = "https://tej.as";
+const SITE = (import.meta.env.SITE ?? "https://tej.as").replace(/\/$/, "");
 
 const esc = (s) =>
   s

@@ -1,4 +1,5 @@
 ---
+import { u } from "../../lib/url";
 /* /demos/tavus — Tavus video AI demo embed region (static reproduction). */
 import Base from "../../layouts/Base.astro";
 ---
@@ -10,7 +11,7 @@ import Base from "../../layouts/Base.astro";
   routeName="/demos/tavus"
 >
   <nav aria-label="Breadcrumb" class="crumb">
-    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><a href="/demos/tavus">Demos</a><span aria-hidden="true">/</span><span aria-current="page">Tavus</span>
+    <a href={u("/")}>Tejas Kumar</a><span aria-hidden="true">/</span><a href={u("/demos/tavus")}>Demos</a><span aria-hidden="true">/</span><span aria-current="page">Tavus</span>
   </nav>
 
   <header class="page-head">

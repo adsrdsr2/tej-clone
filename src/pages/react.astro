@@ -1,4 +1,5 @@
 ---
+import { u } from "../lib/url";
 /* /react — Fluent React book page. */
 import Base from "../layouts/Base.astro";
 ---
@@ -10,7 +11,7 @@ import Base from "../layouts/Base.astro";
   routeName="/react"
 >
   <nav aria-label="Breadcrumb" class="crumb">
-    <a href="/">Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Book</span>
+    <a href={u("/")}>Tejas Kumar</a><span aria-hidden="true">/</span><span aria-current="page">Book</span>
   </nav>
 
   <header class="page-head">
@@ -41,7 +42,7 @@ import Base from "../layouts/Base.astro";
     </p>
     <p class="cta-row">
       <a class="btn" href="https://www.oreilly.com/library/view/fluent-react/9781098138707/" target="_blank" rel="noopener">Read on O'Reilly</a>
-      <a class="btn btn--ghost" href="/workshops">Book a React workshop</a>
+      <a class="btn btn--ghost" href={u("/workshops")}>Book a React workshop</a>
     </p>
   </section>
 </Base>

@@ -1,4 +1,5 @@
 ---
+import { u } from "../lib/url";
 /* Shared site footer: brand block + 4 sitemap columns + legal bar. */
 const cols = [
   {
@@ -57,7 +58,7 @@ const cols = [
           {c.links.map((l) => (
             <li>
               <a
-                href={l.href}
+                href={l.ext ? l.href : u(l.href)}
                 {...(l.ext ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               >
                 {l.label}
